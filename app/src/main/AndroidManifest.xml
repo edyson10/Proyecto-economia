@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.proyectoeconomia">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Solucion.Solucion20Activity"></activity>
+        <activity android:name=".Solucion.Solucion19Activity" />
+        <activity android:name=".Solucion.Solucion18Activity" />
+        <activity android:name=".Solucion.Solucion17Activity" />
+        <activity android:name=".Solucion.Solucion16Activity" />
+        <activity android:name=".Solucion.Solucion15Activity" />
+        <activity android:name=".Solucion.Solucion14Activity" />
+        <activity android:name=".Solucion.Solucion13Activity" />
+        <activity android:name=".Solucion.Solucion12Activity" />
+        <activity android:name=".Solucion.Solucion11Activity" />
+        <activity android:name=".Solucion.Solucion10Activity" />
+        <activity android:name=".Solucion.Solucion9Activity" />
+        <activity android:name=".Solucion.Solucion8Activity" />
+        <activity android:name=".Solucion.Solucion7Activity" />
+        <activity android:name=".Solucion.Solucion6Activity" />
+        <activity android:name=".Solucion.Solucion5Activity" />
+        <activity android:name=".Solucion.Solucion4Activity" />
+        <activity android:name=".Solucion.Solucion3Activity" />
+        <activity android:name=".Solucion.Solucion2Activity" />
+        <activity android:name=".Ejercicios.Ejercicio20Activity" />
+        <activity android:name=".Ejercicios.Ejercicio19Activity" />
+        <activity android:name=".Ejercicios.Ejercicio18Activity" />
+        <activity android:name=".Ejercicios.Ejercicio17Activity" />
+        <activity android:name=".Ejercicios.Ejercicio16Activity" />
+        <activity android:name=".Ejercicios.Ejercicio15Activity" />
+        <activity android:name=".Ejercicios.Ejercicio14Activity" />
+        <activity android:name=".Ejercicios.Ejercicio13Activity" />
+        <activity android:name=".Ejercicios.Ejercicio12Activity" />
+        <activity android:name=".Ejercicios.Ejercicio11Activity" />
+        <activity android:name=".Ejercicios.Ejercicio10Activity" />
+        <activity android:name=".Ejercicios.Ejercicio9Activity" />
+        <activity android:name=".Ejercicios.Ejercicio8Activity" />
+        <activity android:name=".Ejercicios.Ejercicio7Activity" />
+        <activity android:name=".Ejercicios.Ejercicio6Activity" />
+        <activity android:name=".Ejercicios.Ejercicio5Activity" />
+        <activity android:name=".Ejercicios.Ejercicio4Activity" />
+        <activity android:name=".Ejercicios.Ejercicio3Activity" />
+        <activity android:name=".Ejercicios.Ejercicio2Activity" />
+        <activity android:name=".Solucion.Solucion1Activity" />
+        <activity android:name=".Ejercicios.Ejercicio1Activity" />
+        <activity
+            android:name=".InteresSimpleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

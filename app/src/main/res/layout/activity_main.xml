@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INGENIERIA ECONOMICA"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnInteresSimple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interes Simple"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btnInteresCompueto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interes Compuesto"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btnAnualidades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anualidades"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btnGradientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gradientes"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
