@@ -29,9 +29,11 @@ import com.example.proyectoeconomia.Ejercicios.Ejercicio7Activity;
 import com.example.proyectoeconomia.Ejercicios.Ejercicio8Activity;
 import com.example.proyectoeconomia.Ejercicios.Ejercicio9Activity;
 
+import java.util.Random;
+
 public class InteresSimpleActivity extends AppCompatActivity {
 
-    Button e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15, e16, e17, e18, e19, e20;
+    Button e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15, e16, e17, e18, e19, e20, btnAle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,7 @@ public class InteresSimpleActivity extends AppCompatActivity {
         e18 = (Button) findViewById(R.id.btnEjercicio18);
         e19 = (Button) findViewById(R.id.btnEjercicio19);
         e20 = (Button) findViewById(R.id.btnEjercicio20);
+        btnAle = (Button) findViewById(R.id.btnAleatorio);
 
         e1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -198,6 +201,13 @@ public class InteresSimpleActivity extends AppCompatActivity {
                 vistaEjercicio20();
             }
         });
+
+        btnAle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                vistaAleatoria(aleatorio());
+            }
+        });
     }
 
     private void vistaEjercicio1(){
@@ -328,5 +338,75 @@ public class InteresSimpleActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Ejercicio20Activity.class);
         startActivity(intent);
         */
+    }
+
+    private int aleatorio(){
+        int numero = (int) (Math.random() * 20) + 1;
+        return numero;
+    }
+
+    private void vistaAleatoria(int vista){
+        switch (vista){
+            case 1:
+                vistaEjercicio1();
+                break;
+            case 2:
+                vistaEjercicio2();
+                break;
+            case 3:
+                vistaEjercicio3();
+                break;
+            case 4:
+                vistaEjercicio4();
+                break;
+            case 5:
+                vistaEjercicio5();
+                break;
+            case 6:
+                vistaEjercicio6();
+                break;
+            case 7:
+                vistaEjercicio7();
+                break;
+            case 8:
+                vistaEjercicio8();
+                break;
+            case 9:
+                vistaEjercicio9();
+                break;
+            case 10:
+                vistaEjercicio10();
+                break;
+            case 11:
+                vistaEjercicio11();
+                break;
+            case 12:
+                vistaEjercicio12();
+                break;
+            case 13:
+                vistaEjercicio13();
+                break;
+            case 14:
+                vistaEjercicio14();
+                break;
+            case 15:
+                vistaEjercicio15();
+                break;
+            case 16:
+                vistaEjercicio16();
+                break;
+             case 17:
+                 vistaEjercicio17();
+                 break;
+            case 18:
+                vistaEjercicio18();
+                break;
+            case 19:
+                vistaEjercicio19();
+                break;
+            case 20:
+                vistaEjercicio20();
+                break;
+        }
     }
 }
