@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.proyectoeconomia.Ejercicios.Ejercicio10Activity;
 import com.example.proyectoeconomia.Ejercicios.Ejercicio11Activity;
@@ -250,52 +251,82 @@ public class InteresSimpleActivity extends AppCompatActivity {
     }
 
     private void vistaEjercicio11() {
+        Toast.makeText(getApplicationContext(), "¡Opción no disponible!", Toast.LENGTH_SHORT).show();
+        /*
         Intent intent = new Intent(getApplicationContext(), Ejercicio11Activity.class);
         startActivity(intent);
+        */
     }
 
     private void vistaEjercicio12() {
+        Toast.makeText(getApplicationContext(), "¡Opción no disponible!", Toast.LENGTH_SHORT).show();
+        /*
         Intent intent = new Intent(getApplicationContext(), Ejercicio12Activity.class);
         startActivity(intent);
+        */
     }
 
     private void vistaEjercicio13() {
+        Toast.makeText(getApplicationContext(), "¡Opción no disponible!", Toast.LENGTH_SHORT).show();
+        /*
         Intent intent = new Intent(getApplicationContext(), Ejercicio13Activity.class);
         startActivity(intent);
+        */
     }
 
     private void vistaEjercicio14() {
+        Toast.makeText(getApplicationContext(), "¡Opción no disponible!", Toast.LENGTH_SHORT).show();
+        /*
         Intent intent = new Intent(getApplicationContext(), Ejercicio14Activity.class);
         startActivity(intent);
+        */
     }
 
     private void vistaEjercicio15() {
+        Toast.makeText(getApplicationContext(), "¡Opción no disponible!", Toast.LENGTH_SHORT).show();
+        /*
         Intent intent = new Intent(getApplicationContext(), Ejercicio15Activity.class);
         startActivity(intent);
+        */
     }
 
     private void vistaEjercicio16() {
+        Toast.makeText(getApplicationContext(), "¡Opción no disponible!", Toast.LENGTH_SHORT).show();
+        /*
         Intent intent = new Intent(getApplicationContext(), Ejercicio16Activity.class);
         startActivity(intent);
+        */
     }
 
     private void vistaEjercicio17() {
+        Toast.makeText(getApplicationContext(), "¡Opción no disponible!", Toast.LENGTH_SHORT).show();
+        /*
         Intent intent = new Intent(getApplicationContext(), Ejercicio17Activity.class);
         startActivity(intent);
+        */
     }
 
     private void vistaEjercicio18() {
+        Toast.makeText(getApplicationContext(), "¡Opción no disponible!", Toast.LENGTH_SHORT).show();
+        /*
         Intent intent = new Intent(getApplicationContext(), Ejercicio18Activity.class);
         startActivity(intent);
+        */
     }
 
     private void vistaEjercicio19() {
+        Toast.makeText(getApplicationContext(), "¡Opción no disponible!", Toast.LENGTH_SHORT).show();
+        /*
         Intent intent = new Intent(getApplicationContext(), Ejercicio19Activity.class);
         startActivity(intent);
+        */
     }
 
     private void vistaEjercicio20() {
+        Toast.makeText(getApplicationContext(), "¡Opción no disponible!", Toast.LENGTH_SHORT).show();
+        /*
         Intent intent = new Intent(getApplicationContext(), Ejercicio20Activity.class);
         startActivity(intent);
+        */
     }
 }

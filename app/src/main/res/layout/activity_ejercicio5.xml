@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
     tools:context=".Ejercicios.Ejercicio5Activity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="EJERCICIO 3"/>
+
+    <TextView
+        android:id="@+id/txtEnunciado"
+        android:layout_below="@id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Se adquiere una máquina financiada y se pacta cubrir en tres pagos de $260.000, $480.000 y $600.000 en los meses 3, 5 y 22 meses, respectivamente. Hallar el valor de contado sabiendo que la financiación contempla una tasa de interés sobre saldo del 3,5% bimestral simple para los 6 primeros meses y del 6,8% trimestral simple de allí en adelante, punto focal mes 6."/>
+
+    <Button
+        android:id="@+id/btnSolucion5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="SOLUCIÓN"/>
+
+</RelativeLayout>
