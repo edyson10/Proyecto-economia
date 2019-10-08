@@ -20,39 +20,84 @@
         android:textSize="20dp"
         android:layout_gravity="center"/>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="150dp"
-        android:layout_gravity="center_horizontal">
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnInteresSimple"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Interes Simple"
-            android:layout_gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnInteresCompueto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Interes Compuesto"
-            android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/logo_ufps"
+                android:layout_gravity="center"/>
 
-        <Button
-            android:id="@+id/btnAnualidades"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Anualidades"
-            android:layout_gravity="center"/>
+            <Button
+                android:id="@+id/btnInteresSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interes Simple"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"/>
 
-        <Button
-            android:id="@+id/btnGradientes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gradientes"
-            android:layout_gravity="center"/>
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnInteresCompueto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interes Compuesto"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btnAnualidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anualidades"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btnGradientes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gradientes"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:text="Autores"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Maria Fernanda Montoya Perez"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Edgar Farid Carreño Florez"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Docente"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Antonio Vicente Granados Guerrero"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
