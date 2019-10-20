@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.proyectoeconomia.R;
-import com.example.proyectoeconomia.Solucion.Solucion1Activity;
 import com.example.proyectoeconomia.Solucion.Solucion2Activity;
 
 public class Ejercicio2Activity extends AppCompatActivity {
