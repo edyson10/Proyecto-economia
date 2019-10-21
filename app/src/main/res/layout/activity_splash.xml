@@ -14,12 +14,17 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-150dp"
+            android:src="@drawable/logo_ufps"/>
         <TextView
             android:id="@+id/splashTexto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="15dp"
             android:text="SOLUCIONARIO"
             android:textColor="@color/secondaryTextColor"
             android:textSize="24dp"

@@ -489,6 +489,4 @@
                 android:text="ALEATORRIO"/>
         </LinearLayout>
     </ScrollView>
-
-
 </LinearLayout>

@@ -56,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void vistaInteresCompuesto(){
-        Toast.makeText(getApplicationContext(), "Opcion aún no disponible", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), InteresCompuestoActivity.class);
+        startActivity(intent);
     }
 
     private void vistaAnualidades(){
