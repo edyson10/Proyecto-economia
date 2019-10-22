@@ -18,7 +18,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Button interesSimple, interesCompuesto, anualidades, gradiente, aleatorio;
-    private EditText numero;
+    private EditText numero, p;
     private ExampleDialogListener listener;
 
     @Override
@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         anualidades = (Button) findViewById(R.id.btnAnualidades);
         gradiente = (Button) findViewById(R.id.btnGradientes);
         aleatorio = (Button) findViewById(R.id.btnAleatorio);
+        p = new EditText(this);
+        p.setInputType(InputType.TYPE_CLASS_NUMBER);
 
         interesSimple.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +66,29 @@ public class MainActivity extends AppCompatActivity {
         aleatorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pantallaAleatorio();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getApplicationContext());
+                //.setIcon(R.drawable.icono)
+                alertDialog.setTitle("Solucionario");
+                alertDialog.setMessage("¿Cuantos ejercicios desea hacer? \n Del 1 al 5");
+
+                LayoutInflater inflater = getLayoutInflater();
+                alertDialog.setView(p);
+                alertDialog.create();
+
+                //final int n = aleatorio(Integer.parseInt(numero.getText().toString()));
+
+                alertDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                }).setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Toast.makeText(getApplicationContext(), "--> " + p.getText().toString(), Toast.LENGTH_SHORT).show();
+                            }
+                }).show();
+
+
             }
         });
     }
@@ -88,29 +112,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void pantallaAleatorio(){
-
-
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        //.setIcon(R.drawable.icono)
-        alertDialog.setTitle("Solucionario");
-        alertDialog.setMessage("¿Cuantos ejercicios desea hacer? \n Del 1 al 5");
-
-        LayoutInflater inflater = getLayoutInflater();
-        View view = inflater.inflate(R.layout.design_dialog, null);
-        alertDialog.setView(view);
-
-        alertDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        })
-        .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                int n = aleatorio(Integer.parseInt(numero.getText().toString()));
-                Toast.makeText(getApplicationContext(), "--> " + n, Toast.LENGTH_SHORT).show();
-            }
-        }).show();
 
     }
 
