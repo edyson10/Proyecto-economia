@@ -689,7 +689,7 @@ public class EjercicioActivity extends AppCompatActivity {
             /* ===== INTERES COMPUESTO ===== */
             //SOLUCION 51
             case 50:
-                titulo.setText("EJERCICIO 51");
+                titulo.setText("EJERCICIO 1");
                 enunciado.setText("Dentro de cuantos trimestres se tendra en una cuenta de ahorros un salde de $25.900.000 sabiendo que hoy se hace un deposito de $14.400.000 y luego retiros asi: $1.800.000 dentro de 9 meses, $1.920.000 dentro de doce meses, si la cuenta de ahooros abona un interes del 9.5% trimestral.");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -702,7 +702,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 52
             case 51:
-                titulo.setText("EJERCICIO 52");
+                titulo.setText("EJERCICIO 2");
                 enunciado.setText("Una bicicleta tiene un valor de contado de $8.000.000. A plazos exigen una cuota inicial de $3.250.000 y el resto financiado para ser cancelado con tres cuotas de $2.000.000;2.500.000 y $2.000.000, en los meses ocho,doce y quince despues de recibida la bicicleta. encontrar el interes mensual de financiacion");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -715,7 +715,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 53
             case 52:
-                titulo.setText("EJERCICIO 53");
+                titulo.setText("EJERCICIO 3");
                 enunciado.setText("Con cuanto cancela su deuda el dia de hoy 13 de mayo de 2018, si el 8 de octubre del 2017 se debian $20.250.000, el 10 de diciembre de 2017 le prestan $10.725.000 y otros $18.000.000 el 15 de febrero de 2018, suponga que la tasa es del 19.2% anual. punto focal 10 de diciembre de 2017");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -728,7 +728,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 54
             case 53:
-                titulo.setText("EJERCICIO 54");
+                titulo.setText("EJERCICIO 4");
                 enunciado.setText("Con intereses del 15.6% anual nominal semestral,el precio de un equipo se amortiza con 8 mensualidades de $1.800.000. Obtenga el total que se paga por concepto de intereses y el precio de contado");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -741,7 +741,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 55
             case 54:
-                titulo.setText("EJERCICIO 55");
+                titulo.setText("EJERCICIO 5");
                 enunciado.setText("Una persona contrajo una deuda hace 18 meses por $200.000.000 con 22% de interes anual nominal quincenal,que vence dentro de 4 meses. Además debe pagar otra deuda de $150.000.000 contraida hace 2 meses,con 15% de interes semestral nominal mensual y que vence dentro de dos meses. Considerando un interes de 17% semestral, ¿Que pago deberá hacer hoy para saldar sus deudas,si se compromete a pagar $100.000.000 dentro de 6 meses?");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -754,7 +754,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 56
             case 55:
-                titulo.setText("EJERCICIO 56");
+                titulo.setText("EJERCICIO 6");
                 enunciado.setText("Una persona pretende acumular $135.000.000 y para eso 6 meses antes abre una cuenta con $39.300.000, ganando intereses del 6.63% semestral nominal mensual. Dos meses despues deposita otros $39.700.000 ¿ Cuanto deberá depositar 3 meses después de la apertura para lograr su objetivo?");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -767,7 +767,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 57
             case 56:
-                titulo.setText("EJERCICIO 57");
+                titulo.setText("EJERCICIO 7");
                 enunciado.setText("Una persona tiene las siguientes deundas: $5.000.000 que se vencen el 13 de enero de 2016 que fueron prestados el 8 de octubre del 2014 a una tasa de interes del 14% semestral nominal quincenal; $12.000.000 que se vencen el 15 de noviembre de 2017 que fueron prestados el 13 de enero de 2015 con una tasa de interes del 2.5% mensual. Se desea cancelar todo el 3 de mayo de 2018. se acuerda una tasa de interes del 22% anual nominal semanal.");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -780,7 +780,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 58
             case 57:
-                titulo.setText("EJERCICIO 58");
+                titulo.setText("EJERCICIO 8");
                 enunciado.setText("Hace 22 bimestres deposité $18.565.000 y,9 bimestres después retiré $12.252.000 ¿Cuánto tendré acumulado hoy si hace tres bimestres deposité $14.300.000 y el interes que reconoce es del 4.7% semestral nominal quincenal por los primeros 6 bimestres y del 8% anual nominal bimestral de ahí en adelante?");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -793,7 +793,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 59
             case 58:
-                titulo.setText("EJERCICIO 59");
+                titulo.setText("EJERCICIO 9");
                 enunciado.setText("Cuál es el precio de un automovil que se adquiere con un anticipo del 40% y 6 cuotas trimestrales de $22.300.000 cada una, y que incluyen intereses de 1.75% mensual?");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -806,7 +806,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 60
             case 59:
-                titulo.setText("EJERCICIO 60");
+                titulo.setText("EJERCICIO 10");
                 enunciado.setText("Una persona compra un camión para transportar su cosecha de caña y lo liquida de la siguiente manera: una cuota inicial de $9.000.000; un abono a los 3 meses por $6.500.000 y otro por $8.250.000 cinco meses despues. Poco antes de efectuar el segundo abono decide con su acreedor cambiar los 2 compromisos por 4 mensuales haciendo el primero a los 3 meses de la compra ¿Por que cantidad son estos pagos, sabiendo que le cargan el 18.6% de interes anual nominal semanal y \n" +
                         "a) los 4 son iguales\n" +
                         "b) cada uno es 18% mayor que el anterior\n" +
@@ -822,7 +822,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 61
             case 60:
-                titulo.setText("EJERCICIO 61");
+                titulo.setText("EJERCICIO 11");
                 enunciado.setText("Se compra una camioneta con una cuota inicial del 25% del valor de contado,un pago a los 3 meses que corresponden al 35% del precio, y otro al mes 8 por $15.185.000. suponiendo interes del 15.6% anual nominal trimestral determine:\n" +
                         "a) el precio de ocntado del vehiculo\n" +
                         "b) el tamñano del pago a los 3 meses\n" +
@@ -838,7 +838,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 62
             case 61:
-                titulo.setText("EJERCICIO 62");
+                titulo.setText("EJERCICIO 12");
                 enunciado.setText("Si se depositan hoy $17.180.000, dentro de 9 meses $15.450.000 y 8 meses despues de realizado el anterior deposito, $18.260.000 ¿Cuanto se tendrá acumulado 30 meses despues de efectuado el primer deposito si se reconoce el 3% bimestral nominal semanal por los primeros 10 meses y del 5% trimestral nominal mensual de ahi en adelante?");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -851,7 +851,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 63
             case 62:
-                titulo.setText("EJERCICIO 63");
+                titulo.setText("EJERCICIO 13");
                 enunciado.setText("Se compra una motocicleta de $3.700.000 con un pago inicial del 30% y 4 abonos trimestrales que crecen $50.000 con respecto al anterior, reconociendo unos intereses del 15% anual nominal semanal ¿de cueanto es cada pago?");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -864,7 +864,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 64
             case 63:
-                titulo.setText("EJERCICIO 64");
+                titulo.setText("EJERCICIO 14");
                 enunciado.setText("Una persona deposita $100.000.000 en una cuenta de ahorros que paga un interes del 7% trimestral nominal quincenal; dentro de 5 años retira la tercera parte del total acumulado en su cuenta, dos años mas tarde hace un deposito igual a la mitad del saldo existente en ese momento y dos años despues retira la totalidad del dinero existente en esa fecha.Hallar el valor de ese ultimo retiro.");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -877,7 +877,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 65
             case 64:
-                titulo.setText("EJERCICIO 65");
+                titulo.setText("EJERCICIO 15");
                 enunciado.setText("Una deuda de $22.000.000 que vence en 8 trimestres y otra de $17.500.000 que vence dentro de 14 trimestres,se van a pagar mediante un abono de $13.000.000 realizado en este momento y dos pagos iguales que se harán dentro de 10 trimestres y dentro de 22 trimestres,respectivamente. Si el rendimiento del dinero es 8% trimestral nominal mensual ¿ de cuanto debe ser cada unos de los pagos?");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -890,7 +890,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 66
             case 65:
-                titulo.setText("EJERCICIO 66");
+                titulo.setText("EJERCICIO 16");
                 enunciado.setText("A tiene con B las sifuientes deudas $36.000.000 que se deben pagar dentro de 14 meses $51.000.000 que debe pagar dentro de 28 meses. B aceptó recibir un abono,el dia de hoy,de $16.000.000 que A tiene disponible. Si A desea liquidar su deuda mediante un segundo pago de %75.000.000 ¿ En que tiempo deberá realizarlo? la tasa de interes acordada es del 1.125% mensual");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -903,7 +903,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 67
             case 66:
-                titulo.setText("EJERCICIO 67");
+                titulo.setText("EJERCICIO 17");
                 enunciado.setText("¿En cuanos dia un capital crece 15% si se invierte con el 6.03% anual?");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -916,7 +916,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 68
             case 67:
-                titulo.setText("EJERCICIO 68");
+                titulo.setText("EJERCICIO 18");
                 enunciado.setText("Un empresario tiene 4 obligaciones pendientes de $11.000.000; $13.000.000 y $14.600.000 con vencimineto a los 2,7,15 trimestres. para pagar esas deudas propone canjear las cuatro obligaciones en una sola cancelada dentro de 9 trimestres. Determinar el monto que tendria que cancelar si la tasa de interes fuera del 15% semestral");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -929,7 +929,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 69
             case 68:
-                titulo.setText("EJERCICIO 69");
+                titulo.setText("EJERCICIO 19");
                 enunciado.setText("¿ De cuanto e cada pago trimestral que amortiza un credito de $16.000.000 en una año con un interes de 12.3% anual nominal bimestral? suponga que los pagos son iguales");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -942,7 +942,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 break;
             //SOLUCION 70
             case 69:
-                titulo.setText("EJERCICIO 70");
+                titulo.setText("EJERCICIO 20");
                 enunciado.setText("Un inversionista coloco su capital de $150.500.000 como pretamo a un particular por 6 años y a interes compuesto, se sabe que durante este lapso de tiempo, la tasa de interes tuvo las siguientes variaciones, o,5% quincenal durante los primeros 6 meses; 1.5% semstral por los 6 meses consecutivos; 2% mensual por los siguientes 4 trimestres; 1.5% aual por los siguientes 5 semestres; 0.012% diario por los siguientes 2 meses; 1.25% bimestral por el tiempo restante. \n" +
                         "a) el inversionista desea conocer el interes generado por su capital.\n" +
                         "b) ¿Cuál es el interes trimestral promedio?");

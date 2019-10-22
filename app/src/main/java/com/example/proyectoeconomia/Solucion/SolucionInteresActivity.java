@@ -1,25 +1,34 @@
 package com.example.proyectoeconomia.Solucion;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
+import android.app.AlertDialog;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.proyectoeconomia.R;
+import com.example.proyectoeconomia.ScaleListener;
+import com.github.chrisbanes.photoview.PhotoView;
 
 public class SolucionInteresActivity extends AppCompatActivity {
 
     TextView titulo;
     ImageView imagen1, imagen2;
     int boton;
+
     Matrix matrix = new Matrix();
     Float scale = 1f;
-    ScaleGestureDetector SGD;
+    ScaleGestureDetector SGD1, SGD2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +42,36 @@ public class SolucionInteresActivity extends AppCompatActivity {
         Bundle datos = this.getIntent().getExtras();
         boton = datos.getInt("solucion");
 
-        SGD = new ScaleGestureDetector(getApplicationContext(), new ScaleListener());
+        SGD1 = new ScaleGestureDetector(this, new ScaleListener(imagen1));
+        SGD2 = new ScaleGestureDetector(this, new ScaleListener(imagen2));
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.s1_1);
+        RoundedBitmapDrawable mDrawable = RoundedBitmapDrawableFactory.create(getResources(), bitmap);
+        mDrawable.setCircular(true);
+        imagen1.setImageDrawable(mDrawable);
+
+
+        imagen1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(SolucionInteresActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.dialog_custom_layout, null);
+                PhotoView photoView = mView.findViewById(R.id.imagenSolucion1);
+                Drawable my1 = getResources().getDrawable(R.drawable.s1_1);
+                photoView.setImageResource(R.drawable.logo_ufps);
+                mBuilder.setView(mView);
+                AlertDialog mDialog = mBuilder.create();
+                mDialog.show();
+            }
+        });
 
         vistaSolucion(boton);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        SGD1.onTouchEvent(event);
+        return super.onTouchEvent(event);
     }
 
     private void vistaSolucion(int boton){
@@ -369,65 +405,65 @@ public class SolucionInteresActivity extends AppCompatActivity {
             /* ===== INTERES COMPUESTO ===== */
             //SOLUCION 51
             case 50:
-                titulo.setText("SOLUCION EJERCICIO 51");
+                titulo.setText("SOLUCION EJERCICIO 1");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_1_1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_1_2);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 52
             case 51:
-                titulo.setText("SOLUCION EJERCICIO 52");
+                titulo.setText("SOLUCION EJERCICIO 2");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_2);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 53
             case 52:
-                titulo.setText("SOLUCION EJERCICIO 53");
+                titulo.setText("SOLUCION EJERCICIO 3");
                 my1 = getResources().getDrawable(R.drawable.solucion_3);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 54
             case 53:
-                titulo.setText("SOLUCION EJERCICIO 54");
+                titulo.setText("SOLUCION EJERCICIO 4");
                 my1 = getResources().getDrawable(R.drawable.ejercicio_4_1);
                 my2 = getResources().getDrawable(R.drawable.ejercicio_4_2);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 55
             case 54:
-                titulo.setText("SOLUCION EJERCICIO 55");
+                titulo.setText("SOLUCION EJERCICIO 5");
                 my1 = getResources().getDrawable(R.drawable.solicion_ejercicio_5_1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_5_2);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 56
             case 55:
-                titulo.setText("SOLUCION EJERCICIO 56");
+                titulo.setText("SOLUCION EJERCICIO 6");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_6);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 57
             case 56:
-                titulo.setText("SOLUCION EJERCICIO 57");
+                titulo.setText("SOLUCION EJERCICIO 7");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_7_1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_7_2);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 58
             case 57:
-                titulo.setText("SOLUCION EJERCICIO 58");
+                titulo.setText("SOLUCION EJERCICIO 8");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_8);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 59
             case 58:
-                titulo.setText("SOLUCION EJERCICIO 59");
+                titulo.setText("SOLUCION EJERCICIO 9");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_9);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 60
             case 59:
-                titulo.setText("SOLUCION EJERCICIO 60");
+                titulo.setText("SOLUCION EJERCICIO 10");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_10_1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_10_2);
                 my3 = getResources().getDrawable(R.drawable.solucion_ejercicio_10_3);
@@ -435,86 +471,68 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 break;
             //SOLUCION 61
             case 60:
-                titulo.setText("SOLUCION EJERCICIO 61");
+                titulo.setText("SOLUCION EJERCICIO 11");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_11_1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_11_2);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 62
             case 61:
-                titulo.setText("SOLUCION EJERCICIO 62");
+                titulo.setText("SOLUCION EJERCICIO 12");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_12);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 63
             case 62:
-                titulo.setText("SOLUCION EJERCICIO 63");
+                titulo.setText("SOLUCION EJERCICIO 13");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_13_1);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 64
             case 63:
-                titulo.setText("SOLUCION EJERCICIO 64");
+                titulo.setText("SOLUCION EJERCICIO 14");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_14_1);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 65
             case 64:
-                titulo.setText("SOLUCION EJERCICIO 65");
+                titulo.setText("SOLUCION EJERCICIO 15");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_15_1);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 66
             case 65:
-                titulo.setText("SOLUCION EJERCICIO 66");
+                titulo.setText("SOLUCION EJERCICIO 16");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_16_1);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 67
             case 66:
-                titulo.setText("SOLUCION EJERCICIO 67");
+                titulo.setText("SOLUCION EJERCICIO 17");
                 my1 = getResources().getDrawable(R.drawable.solicion_ejercicio_17__1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_17_2);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 68
             case 67:
-                titulo.setText("SOLUCION EJERCICIO 68");
+                titulo.setText("SOLUCION EJERCICIO 18");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_18);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 69
             case 68:
-                titulo.setText("SOLUCION EJERCICIO 69");
+                titulo.setText("SOLUCION EJERCICIO 19");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_19_1);
                 my1 = getResources().getDrawable(R.drawable.solcion_ejercicio_19_2);
                 imagen1.setImageDrawable(my1);
                 break;
             //SOLUCION 70
             case 69:
-                titulo.setText("SOLUCION EJERCICIO 70");
+                titulo.setText("SOLUCION EJERCICIO 20");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_20_1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_20_2);
                 imagen1.setImageDrawable(my1);
                 break;
         }
-    }
-
-    private class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener{
-        @Override
-        public boolean onScale(ScaleGestureDetector detector) {
-            scale = scale*detector.getScaleFactor();
-            scale = Math.max(0.1f, Math.min(scale, 5f));
-            matrix.setScale(scale,scale);
-            imagen1.setImageMatrix(matrix);
-            imagen2.setImageMatrix(matrix);
-            return true;
-        }
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        SGD.onTouchEvent(event);
-        return true;
     }
 }
