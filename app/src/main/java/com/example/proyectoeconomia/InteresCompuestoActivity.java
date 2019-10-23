@@ -1,11 +1,15 @@
 package com.example.proyectoeconomia;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.proyectoeconomia.Ejercicios.EjercicioActivity;
@@ -16,6 +20,8 @@ public class InteresCompuestoActivity extends AppCompatActivity {
     Button e21, e22, e23, e24, e25, e26, e27, e28, e29, e30, e31, e32, e33, e34, e35, e36, e37, e38, e39, e40;
     Button e41, e42, e43, e44, e45, e46, e47, e48, e49, e50;
     Button []pru = new Button[50];
+
+    private EditText numero;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,34 +96,83 @@ public class InteresCompuestoActivity extends AppCompatActivity {
                 e31, e32, e33, e34, e35, e36, e37, e38, e39, e40,
                 e41, e42, e43, e44, e45, e46, e47, e48, e49, e50};
 
-        prueba(pru);
+        vistaEjercicios(pru);
+
         btnAle = (Button) findViewById(R.id.btnAleatorio);
+
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Solucionario");
+        alertDialog.setMessage("¿Cuantos ejercicios desea hacer? \n Del 1 al 5");
+        numero = new EditText(this);
+        numero.setInputType(InputType.TYPE_CLASS_NUMBER);
+        numero.setPadding(30,10,30,25);
+        alertDialog.setView(numero);
+
+        alertDialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                String n = numero.getText().toString();
+                numero.setText("");
+                int num = Integer.parseInt(n);
+                if(  num >= 1 && num <= 5){
+                    int []numAle = aleatorio(num);
+                    String r = prueba(numAle);
+                    Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), EjercicioActivity.class);
+                    intent.putExtra("arreglo", r);
+                    startActivity(intent);
+                }else Toast.makeText(getApplicationContext(), "Debe digitar un numero entre 1 y 5", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        alertDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+                numero.setText("");
+            }
+        });
+
+        final AlertDialog alert = alertDialog.create();
+
         btnAle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vistaAleatoria();
+                alert.show();
             }
         });
     }
 
-    private void prueba(final Button []p){
-        for (int i = 0; i < p.length; i++){
+    private void vistaEjercicios(final Button []p){
+        for (int i = 0; i < p.length;i++){
             final int finalI = i;
             p[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     //Toast.makeText(getApplicationContext(), "Se presiono el boton: " + p[finalI].getText().toString(),Toast.LENGTH_SHORT).show();
-                    //Toast.makeText(getApplicationContext(), "--> " + (finalI + 50),Toast.LENGTH_SHORT).show();
-
                     Intent intent = new Intent(getApplicationContext(), EjercicioActivity.class);
-                    intent.putExtra("boton", finalI + 50);
+                    intent.putExtra("boton", (finalI + 50));
                     startActivity(intent);
                 }
             });
         }
     }
 
-    private void vistaAleatoria(){
+    public int[] aleatorio(int numero){
+        int []arreglo = new int[numero];
+        for(int i = 0; i < arreglo.length; i++){
+            int alea = (int)(Math.random() * 100);
+            arreglo[i] = alea;
+        }
 
+        return arreglo;
+    }
+
+    private String prueba(int[] numero){
+        String cad = "";
+        for (int i = 0; i < numero.length; i++){
+            cad += "" + numero[i] + "-";
+        }
+        return cad;
     }
 }

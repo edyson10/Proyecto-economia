@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button interesSimple, interesCompuesto, anualidades, gradiente, aleatorio;
     private EditText numero;
-    private ExampleDialogListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

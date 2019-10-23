@@ -27,13 +27,21 @@ public class EjercicioActivity extends AppCompatActivity {
         enunciado = (TextView) findViewById(R.id.txtEnunciadoEjericico);
         solucion = (Button) findViewById(R.id.btnSolucionario);
 
+        String []vis = null;
         Bundle datos = this.getIntent().getExtras();
         boton = datos.getString("arreglo");
-        String []vis = boton.split("-");
-        //Toast.makeText(getApplicationContext(), "-> " + vis[1], Toast.LENGTH_SHORT).show();
-        int vista = Integer.parseInt(vis[0].toString());
-        //Toast.makeText(getApplicationContext(), "-> " + vis[0], Toast.LENGTH_SHORT).show();
-        vistaEjerecicio(vista);
+
+        if(boton != null){
+            vis= boton.split("-");
+            //Toast.makeText(getApplicationContext(), "-> " + vis[1], Toast.LENGTH_SHORT).show();
+            int vista = Integer.parseInt(vis[0].toString());
+            //Toast.makeText(getApplicationContext(), "-> " + vis[0], Toast.LENGTH_SHORT).show();
+            vistaEjerecicio(vista);
+        }
+
+        Bundle vista = this.getIntent().getExtras();
+        int view = vista.getInt("boton");
+        vistaEjerecicio(view);
 
         /*
         Bundle ale = this.getIntent().getExtras();

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@color/white"
     tools:context=".SplashActivity">
 
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="-100dp"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/logoapp"/>
         <TextView
             android:id="@+id/splashTexto"
             android:layout_width="wrap_content"
