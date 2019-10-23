@@ -16,7 +16,7 @@
         android:id="@+id/txtTituloEjercicio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="EJERCICIO 1"
+        android:text="EJERCICIO n/a"
         android:gravity="center"/>
 
     <TextView

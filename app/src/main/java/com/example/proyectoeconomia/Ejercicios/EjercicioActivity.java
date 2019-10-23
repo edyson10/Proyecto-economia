@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.proyectoeconomia.R;
 import com.example.proyectoeconomia.Solucion.SolucionInteresActivity;
@@ -15,7 +16,7 @@ public class EjercicioActivity extends AppCompatActivity {
 
     TextView titulo, enunciado;
     Button solucion;
-    int boton;
+    String boton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +28,20 @@ public class EjercicioActivity extends AppCompatActivity {
         solucion = (Button) findViewById(R.id.btnSolucionario);
 
         Bundle datos = this.getIntent().getExtras();
-        boton = datos.getInt("boton");
-        //Toast.makeText(getApplicationContext(), "--> " + boton, Toast.LENGTH_SHORT).show();
-        vistaEjerecicio(boton);
+        boton = datos.getString("arreglo");
+        String []vis = boton.split("-");
+        //Toast.makeText(getApplicationContext(), "-> " + vis[1], Toast.LENGTH_SHORT).show();
+        int vista = Integer.parseInt(vis[0].toString());
+        //Toast.makeText(getApplicationContext(), "-> " + vis[0], Toast.LENGTH_SHORT).show();
+        vistaEjerecicio(vista);
+
+        /*
+        Bundle ale = this.getIntent().getExtras();
+        int al = ale.getInt("aleatorio");
+
+        Bundle vis = this.getIntent().getExtras();
+        int v = vis.getInt("vista");
+        vistaEjerecicio(v);*/
 
     }
 
@@ -955,6 +967,417 @@ public class EjercicioActivity extends AppCompatActivity {
                     }
                 });
                 break;
+            //SOLUCION 71
+            case 70:
+                titulo.setText("EJERCICIO 21");
+                enunciado.setText("Se invierten $13.200.000 a 2.12% mensual de interés, por tres años y cuatro meses.\n" +
+                        "¿Cuál es la cantidad acumulada al término de ese tiempo? ¿a cuánto asciende el\n" +
+                        "interés ganado?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 71:
+                titulo.setText("EJERCICIO 22");
+                enunciado.setText("El saldo de una cuenta en el banco era $184.000.000 el 10 de agosto 2015. La\n" +
+                        "cuenta se abrió el 10 de julio de 2011. ¿Cuál fue el capital originalmente depositado,\n" +
+                        "si la tasa de interés fue de 13% anual nominal quincenal?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 72:
+                titulo.setText("EJERCICIO 23");
+                enunciado.setText("Hoy 30 de septiembre de 2018 existe una cuenta de ahorros de $ 125 870 000\n" +
+                        "que día se consignaron 110 000 000 si se reconoce una tasa de interés del 3%\n" +
+                        "semestral nominal mensual hasta el 28 de enero de 2018 y del 5,6% anual\n" +
+                        "nominal semanal de ahí en adelante.");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 73:
+                titulo.setText("EJERCICIO 24");
+                enunciado.setText("Al vender su residencia una persona compra un apartamento y deposita el resto en\n" +
+                        "una cuenta que le reconoce el 8.4% de interés anual nominal quincenal. ¿Cuánto le\n" +
+                        "dieron por la casa, si en 5 años la cuenta le reconoció $24.300,000 por concepto de\n" +
+                        "intereses?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 74:
+                titulo.setText("EJERCICIO 25");
+                enunciado.setText("Se hace un crédito con el banco por valor de $128´000.000, un plazo de 24 meses\n" +
+                        "y una tasa de interés del 5% trimestral nominal mensual en los primeros 4 meses y\n" +
+                        "del 8% semestral nominal quincenal de ahí en adelante; ¿Cuánto dinero debe\n" +
+                        "cancelar?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 75:
+                titulo.setText("EJERCICIO 26");
+                enunciado.setText("Determine a qué tasa trimestral de interés fue necesario depositar $1 .700 .000 para\n " +
+                "que en 30 meses se convirtiera en $3.000.000");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 76:
+                titulo.setText("EJERCICIO 27");
+                enunciado.setText("¿Qué día se prestaron $25.080,000 con intereses del 3% trimestral nominal\n" +
+                        "quincenal si el 2 de noviembre del 2017 se regresaron $35.745.000, dejando la\n" +
+                        "deuda en ceros.");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 77:
+                titulo.setText("EJERCICIO 28");
+                enunciado.setText("Un trabajador deposita el 20 de junio de 2017 su prima vacacional de $1.745.000\n" +
+                        "en un banco que le reconoce una tasa de interés del 5.44% anual nominal\n" +
+                        "semestral, ¿cuánto puede retirar el 24 de diciembre del 2018, si no realiza más\n" +
+                        "consignaciones ni retiros?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 78:
+                titulo.setText("EJERCICIO 29");
+                enunciado.setText("Dentro de cuántos trimestres se tendrá en una cuenta de ahorros un saldo de $\n" +
+                        "25.900.00 sabiendo que hoy se hace un depósito de $ 14.400.000 y luego retiros así: $1.800.000 dentro de 9 meses, $ 1.920.000 dentro de 12 meses, si la cuenta de ahorros abona un interés del 9,5% trimestral.");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 79:
+                titulo.setText("EJERCICIO 30");
+                enunciado.setText("A le debe a B dos sumas de dinero: $ 21.000.000 más intereses al 1,5% mensual, que vence en 8 meses y $ 33.000.000 más intereses al 3.2% Bimestral con vencimiento a 14 meses, si se va a pagar ambas deudas mediante un solo pago al final del mes 16, obtener la cantidad que debe pagarse si la tasa de interés de la operación es 5% trimestral nominal semanal.");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 80:
+                titulo.setText("EJERCICIO 31");
+                enunciado.setText("Un trabajador deposita el 20 de junio de 2017 su prima vacacional de $1.745.000 en un banco que le reconoce una tasa de interés del 5.44% anual nominal semestral, ¿cuánto puede retirar el 24 de diciembre del 2018, si no realiza más consignaciones ni retiros?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 81:
+                titulo.setText("EJERCICIO 32");
+                enunciado.setText("Una persona deposita $36,250.000 en una cuenta que le gana el 5.1% de interés anual nominal semestral, 4 meses después retira el 40% de lo que tiene en su cuenta y 3 meses más tarde retira el resto. ¿Cuánto le dieron por concepto de intereses?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 82:
+                titulo.setText("EJERCICIO 33");
+                enunciado.setText("El día de hoy se compra una máquina y se pone en funcionamiento; esta máquina llegara al final de su vida útil al cabo de 4 años, en esta fecha será necesario adquirir una nueva máquina que se estima costara $120´000.000, la maquina actual para esa época podrá ser vendida por $30´000.000. Cuál es el valor de los 2 depósitos iguales que se deben hacer el día de hoy y al final del año 3 en dos CDT que rinden 6.2% anual, de forma que se pueda comprar la maquina en el año 5?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 83:
+                titulo.setText("EJERCICIO 34");
+                enunciado.setText("Al comprar un equipo quedé debiendo $16.000.000 los cuales debo cancelar con cualquiera de las siguientes dos opciones: a) A los 4 meses $13.500.000 y a los 7,\n" +
+                        "$3.700.000. b) Pagar a los 6 meses $18.920.000. ¿Qué forma de pago es más conveniente a un interés del 2,5 % mensual?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 84:
+                titulo.setText("EJERCICIO 35");
+                enunciado.setText("La compañía recibe dos ofertas para colocar sus utilidades. El banco A le ofrece una tasa de interés del 6.8 % anual; por su parte el banco B le ofrece una tasa de interés 0.55 % mensual nominal quincenal. ¿Cuál es la mejor oferta?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 85:
+                titulo.setText("EJERCICIO 36");
+                enunciado.setText("Determine cuál es el capital que en 18 meses produce un monto de $122.000.000, si se deposita al 2,25% semestral nominal trimestral.");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 86:
+                titulo.setText("EJERCICIO 37");
+                enunciado.setText("Una persona invertirá el 8 de abril de 2017 $25.000.000 en un negocio que pagará una tasa anual simple del 28% anual nominal trimestral. ¿Cuánto recibirá como intereses el 13 de noviembre de 2020?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 87:
+                titulo.setText("EJERCICIO 38");
+                enunciado.setText("Diga qué es más productivo para usted, ¿invertir con el 1,26% de interés bimestral nominal semanal o con el 4.28% semestral nominal mensual?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 88:
+                titulo.setText("EJERCICIO 39");
+                enunciado.setText("Una cuenta de ahorros se abrió con $ X y a los 24 meses se retiraron $ 22.000.000, año y medio más tarde el saldo era $ 22.000.000. Si la tasa de interés fue el 8,5% trimestral, con cuánto se inició la cuenta.");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 89:
+                titulo.setText("EJERCICIO 40");
+                enunciado.setText("Una persona invirtió $25.000.000 al 2,8% mensual por un período de 5 años, a) Obtenga el valor futuro al final de ese tiempo y b) Cuánto más se ganó de intereses?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;//SOLUCION
+            case 90:
+                titulo.setText("EJERCICIO 41");
+                enunciado.setText("A tiene con B las siguientes deudas: $ 36.000.000 que debe pagar dentro de 14 meses $ 51.000.000 que debe pagar dentro de 28 meses. B aceptó recibir un abono, el día de hoy, de $ 16.000.000 que A tiene disponible. Sí A desea liquidar su deuda mediante un segundo pago de $ 75.000.000, ¿En qué tiempo deberá realizarlo? La tasa de interés acordada es del 1,125% mensual?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 91:
+                titulo.setText("EJERCICIO 42");
+                enunciado.setText("Una deuda de $ 22.000.000 que vence en 8 trimestres y otra de 17.500.000 que vence en 14 trimestres, se van a pagar mediante un abono de $ 13.000.000 realizado en este momento y dos pagos iguales que se harán dentro de 10 trimestres y dentro de 22 trimestres, respectivamente. Si el rendimiento del dinero es 8% trimestral nominal mensual, ¿De cuánto debe ser cada uno de los dos pagos?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 92:
+                titulo.setText("EJERCICIO 43");
+                enunciado.setText("Una persona deposita $ 100.000.000 en una cuenta de ahorros que paga un interés del 7% trimestral nominal quincenal; dentro de 5 años retira la tercera parte del total acumulado en su cuenta, dos años más tarde hace un depósito igual a la mitad del saldo existente en ese momento y dos años después retira la totalidad del dinero existente en esa fecha. Hallar el valor de este último retiro.");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 93:
+                titulo.setText("EJERCICIO 44");
+                enunciado.setText("¿cuánto recibe por concepto de intereses una persona que el 10 de junio de 2022 le dan $384.000.000 por un capital que deposito el 3 de febrero del 2016, con intereses del 6.24% trimestral nominal semanal?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 94:
+                titulo.setText("EJERCICIO 45");
+                enunciado.setText("se compra una motocicleta de $3.700.000 con un pago inicial del 30% y 4 abonos trimestrales que crecen $50.000 con respecto al anterior, reconociendo unos intereses del 15% anual nominal semanal. ¿De cuánto es cada pago?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 95:
+                titulo.setText("EJERCICIO 46");
+                enunciado.setText("Obtenga el tamaño de 3 pagos iguales a 1, 2 y 3 meses de que se consiguió, para amortizar el crédito de $235.000.000, si la tasa de interés que se cobra es del 5.8% trimestral nominal semanal.");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 96:
+                titulo.setText("EJERCICIO 47");
+                enunciado.setText("¿Qué tasa de interés trimestral se está cargando en un crédito de $11.676,750 que 200 días después se paga con $13,799,110?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 97:
+                titulo.setText("EJERCICIO 48");
+                enunciado.setText("Una empresa contrata con un banco un crédito por $140´000.000, un plazo de 36 meses y un pago final de $185´000.000; ¿Qué tasa de interés semestral está pagando el empresario?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 98:
+                titulo.setText("EJERCICIO 49");
+                enunciado.setText("Qué cantidad de meses es necesario que transcurran para que $ 13.900.000 se conviertan en $ 18.000.000, a una tasa semestral simple del 8.3%.");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            //SOLUCION
+            case 99:
+                titulo.setText("EJERCICIO 50");
+                enunciado.setText("Un comerciante adquiere un lote de mercancía con valor de $23.350.000 que acuerda cancelar mediante el pago inmediato de $11.200.000 y un pago al final de 4 semestres después. Acepta pagar el 10% anual. Cuánto dinero debe pagar dentro de 4 semestres?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
         }
     }
 }
+

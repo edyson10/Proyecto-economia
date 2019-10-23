@@ -23,7 +23,7 @@ import com.github.chrisbanes.photoview.PhotoView;
 public class SolucionInteresActivity extends AppCompatActivity {
 
     TextView titulo;
-    ImageView imagen1, imagen2;
+    ImageView imagen1, imagen2, imagen3;
     int boton;
 
     Matrix matrix = new Matrix();
@@ -38,6 +38,7 @@ public class SolucionInteresActivity extends AppCompatActivity {
         titulo = (TextView) findViewById(R.id.tituloSolucion);
         imagen1 = (ImageView) findViewById(R.id.imagenSolucion1);
         imagen2 = (ImageView) findViewById(R.id.imagenSolucion2);
+        imagen3 = (ImageView) findViewById(R.id.imagenSolucion3);
 
         Bundle datos = this.getIntent().getExtras();
         boton = datos.getInt("solucion");
@@ -409,6 +410,7 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_1_1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_1_2);
                 imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
                 break;
             //SOLUCION 52
             case 51:
@@ -428,6 +430,7 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 my1 = getResources().getDrawable(R.drawable.ejercicio_4_1);
                 my2 = getResources().getDrawable(R.drawable.ejercicio_4_2);
                 imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
                 break;
             //SOLUCION 55
             case 54:
@@ -435,6 +438,7 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 my1 = getResources().getDrawable(R.drawable.solicion_ejercicio_5_1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_5_2);
                 imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
                 break;
             //SOLUCION 56
             case 55:
@@ -448,6 +452,7 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_7_1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_7_2);
                 imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
                 break;
             //SOLUCION 58
             case 57:
@@ -468,6 +473,8 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_10_2);
                 my3 = getResources().getDrawable(R.drawable.solucion_ejercicio_10_3);
                 imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                imagen3.setImageDrawable(my3);
                 break;
             //SOLUCION 61
             case 60:
@@ -475,6 +482,7 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_11_1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_11_2);
                 imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
                 break;
             //SOLUCION 62
             case 61:
@@ -512,6 +520,7 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 my1 = getResources().getDrawable(R.drawable.solicion_ejercicio_17__1);
                 my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_17_2);
                 imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
                 break;
             //SOLUCION 68
             case 67:
@@ -523,15 +532,219 @@ public class SolucionInteresActivity extends AppCompatActivity {
             case 68:
                 titulo.setText("SOLUCION EJERCICIO 19");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_19_1);
-                my1 = getResources().getDrawable(R.drawable.solcion_ejercicio_19_2);
+                my2 = getResources().getDrawable(R.drawable.solcion_ejercicio_19_2);
                 imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
                 break;
             //SOLUCION 70
             case 69:
                 titulo.setText("SOLUCION EJERCICIO 20");
                 my1 = getResources().getDrawable(R.drawable.solucion_ejercicio_20_1);
-                my2 = getResources().getDrawable(R.drawable.solucion_ejercicio_20_2);
                 imagen1.setImageDrawable(my1);
+                break;
+            case 70:
+                titulo.setText("SOLUCION EJERCICIO 21");
+                my1 = getResources().getDrawable(R.drawable.compuesto_21_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_21_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 71:
+                titulo.setText("SOLUCION EJERCICIO 22");
+                my1 = getResources().getDrawable(R.drawable.compuesto_22_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_22_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 72:
+                titulo.setText("SOLUCION EJERCICIO 23");
+                my1 = getResources().getDrawable(R.drawable.compuesto_23_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_23_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 73:
+                titulo.setText("SOLUCION EJERCICIO 24");
+                my1 = getResources().getDrawable(R.drawable.compuesto_24_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_24_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 74:
+                titulo.setText("SOLUCION EJERCICIO 25");
+                my1 = getResources().getDrawable(R.drawable.compuesto_25_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_25_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 75:
+                titulo.setText("SOLUCION EJERCICIO 26");
+                my1 = getResources().getDrawable(R.drawable.compuesto_26_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_26_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 76:
+                titulo.setText("SOLUCION EJERCICIO 27");
+                my1 = getResources().getDrawable(R.drawable.compuesto_27_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_27_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 77:
+                titulo.setText("SOLUCION EJERCICIO 28");
+                my1 = getResources().getDrawable(R.drawable.compuesto_28_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_28_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 78:
+                titulo.setText("SOLUCION EJERCICIO 29");
+                my1 = getResources().getDrawable(R.drawable.compuesto_29_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_29_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 79:
+                titulo.setText("SOLUCION EJERCICIO 30");
+                my1 = getResources().getDrawable(R.drawable.compuesto_30_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_30_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 80:
+                titulo.setText("SOLUCION EJERCICIO 31");
+                my1 = getResources().getDrawable(R.drawable.compuesto_31);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 81:
+                titulo.setText("SOLUCION EJERCICIO 32");
+                my1 = getResources().getDrawable(R.drawable.compuesto_32_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_32_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 82:
+                titulo.setText("SOLUCION EJERCICIO 33");
+                my1 = getResources().getDrawable(R.drawable.compuesto_33_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_33_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 83:
+                titulo.setText("SOLUCION EJERCICIO 34");
+                my1 = getResources().getDrawable(R.drawable.compuesto_34_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_34_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 84:
+                titulo.setText("SOLUCION EJERCICIO 35");
+                my1 = getResources().getDrawable(R.drawable.compuesto_35_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_35_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 85:
+                titulo.setText("SOLUCION EJERCICIO 36");
+                my1 = getResources().getDrawable(R.drawable.compuesto_36);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 86:
+                titulo.setText("SOLUCION EJERCICIO 37");
+                my1 = getResources().getDrawable(R.drawable.compuesto_37_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_37_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 87:
+                titulo.setText("SOLUCION EJERCICIO 38");
+                my1 = getResources().getDrawable(R.drawable.compuesto_38);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 88:
+                titulo.setText("SOLUCION EJERCICIO 39");
+                my1 = getResources().getDrawable(R.drawable.compuesto_39_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_39_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 89:
+                titulo.setText("SOLUCION EJERCICIO 40");
+                my1 = getResources().getDrawable(R.drawable.compuesto_40_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_40_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 90:
+                titulo.setText("SOLUCION EJERCICIO 41");
+                my1 = getResources().getDrawable(R.drawable.compuesto_41_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_41_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 91:
+                titulo.setText("SOLUCION EJERCICIO 42");
+                my1 = getResources().getDrawable(R.drawable.compuesto_42_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_42_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 92:
+                titulo.setText("SOLUCION EJERCICIO 43");
+                my1 = getResources().getDrawable(R.drawable.compuesto_43_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_43_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 93:
+                titulo.setText("SOLUCION EJERCICIO 44");
+                my1 = getResources().getDrawable(R.drawable.compuesto_44_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_44_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 94:
+                titulo.setText("SOLUCION EJERCICIO 45");
+                my1 = getResources().getDrawable(R.drawable.compuesto_45_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_45_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 95:
+                titulo.setText("SOLUCION EJERCICIO 46");
+                my1 = getResources().getDrawable(R.drawable.compuesto_46_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_46_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 96:
+                titulo.setText("SOLUCION EJERCICIO 47");
+                my1 = getResources().getDrawable(R.drawable.compuesto_47_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_47_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 97:
+                titulo.setText("SOLUCION EJERCICIO 48");
+                my1 = getResources().getDrawable(R.drawable.compuesto_48_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_48_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 98:
+                titulo.setText("SOLUCION EJERCICIO 49");
+                my1 = getResources().getDrawable(R.drawable.compuesto_49_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_49_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
+                break;
+            case 99:
+                titulo.setText("SOLUCION EJERCICIO 50");
+                my1 = getResources().getDrawable(R.drawable.compuesto_50_1);
+                my2 = getResources().getDrawable(R.drawable.compuesto_50_2);
+                imagen1.setImageDrawable(my1);
+                imagen2.setImageDrawable(my2);
                 break;
         }
     }

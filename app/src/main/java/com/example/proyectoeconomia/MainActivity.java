@@ -10,15 +10,19 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.text.Layout;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Toolbar;
+
+import com.example.proyectoeconomia.Ejercicios.EjercicioActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     Button interesSimple, interesCompuesto, anualidades, gradiente, aleatorio;
-    private EditText numero, p;
+    private EditText numero;
     private ExampleDialogListener listener;
 
     @Override
@@ -26,14 +30,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        numero = findViewById(R.id.txtEjercicio);
         interesSimple = (Button) findViewById(R.id.btnInteresSimple);
         interesCompuesto = (Button) findViewById(R.id.btnInteresCompueto);
         anualidades = (Button) findViewById(R.id.btnAnualidades);
         gradiente = (Button) findViewById(R.id.btnGradientes);
         aleatorio = (Button) findViewById(R.id.btnAleatorio);
-        p = new EditText(this);
-        p.setInputType(InputType.TYPE_CLASS_NUMBER);
 
         interesSimple.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,32 +64,45 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Solucionario");
+        alertDialog.setMessage("¿Cuantos ejercicios desea hacer? \n Del 1 al 5");
+        numero = new EditText(this);
+        numero.setInputType(InputType.TYPE_CLASS_NUMBER);
+        numero.setPadding(30,10,30,25);
+        alertDialog.setView(numero);
+
+        alertDialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                String n = numero.getText().toString();
+                numero.setText("");
+                int num = Integer.parseInt(n);
+                if(  num >= 1 && num <= 5){
+                    int []numAle = aleatorio(num);
+                    String r = prueba(numAle);
+                    Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), EjercicioActivity.class);
+                    intent.putExtra("arreglo", r);
+                    startActivity(intent);
+                }else Toast.makeText(getApplicationContext(), "Debe digitar un numero entre 1 y 5", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        alertDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+                numero.setText("");
+            }
+        });
+
+        final AlertDialog alert = alertDialog.create();
+
         aleatorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getApplicationContext());
-                //.setIcon(R.drawable.icono)
-                alertDialog.setTitle("Solucionario");
-                alertDialog.setMessage("¿Cuantos ejercicios desea hacer? \n Del 1 al 5");
-
-                LayoutInflater inflater = getLayoutInflater();
-                alertDialog.setView(p);
-                alertDialog.create();
-
-                //final int n = aleatorio(Integer.parseInt(numero.getText().toString()));
-
-                alertDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                }).setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                Toast.makeText(getApplicationContext(), "--> " + p.getText().toString(), Toast.LENGTH_SHORT).show();
-                            }
-                }).show();
-
-
+                alert.show();
             }
         });
     }
@@ -111,13 +125,32 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "Opcion aún no disponible", Toast.LENGTH_SHORT).show();
     }
 
-    private void pantallaAleatorio(){
+    public int[] aleatorio(int numero){
+        int []arreglo = new int[numero];
+        for(int i = 0; i < arreglo.length; i++){
+            int alea = (int)(Math.random() * 100);
+            arreglo[i] = alea;
+        }
 
+        return arreglo;
     }
 
-    public int aleatorio(int numero){
-        int num = (int)(Math.random()*numero);
-        return num;
+    private String prueba(int[] numero){
+        String cad = "";
+        for (int i = 0; i < numero.length; i++){
+            cad += "" + numero[i] + "-";
+        }
+        return cad;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.logout) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private interface ExampleDialogListener {
