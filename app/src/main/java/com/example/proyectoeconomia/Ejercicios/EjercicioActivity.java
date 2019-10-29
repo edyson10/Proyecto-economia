@@ -39,11 +39,12 @@ public class EjercicioActivity extends AppCompatActivity {
             vistaEjerecicio(vista);
         }
 
+        /*
         Bundle vista = this.getIntent().getExtras();
         int view = vista.getInt("boton");
         vistaEjerecicio(view);
 
-        /*
+
         Bundle ale = this.getIntent().getExtras();
         int al = ale.getInt("aleatorio");
 
