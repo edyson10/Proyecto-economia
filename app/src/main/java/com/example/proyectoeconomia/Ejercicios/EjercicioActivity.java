@@ -707,7 +707,7 @@ public class EjercicioActivity extends AppCompatActivity {
                 });
                 break;
 
-            /* ===== INTERES COMPUESTO ===== */
+            /****** INTERES COMPUESTO ******/
             //SOLUCION 51
             case 50:
                 titulo.setText("EJERCICIO 1");
@@ -1377,6 +1377,250 @@ public class EjercicioActivity extends AppCompatActivity {
             case 99:
                 titulo.setText("EJERCICIO 50");
                 enunciado.setText("Un comerciante adquiere un lote de mercancía con valor de $23.350.000 que acuerda cancelar mediante el pago inmediato de $11.200.000 y un pago al final de 4 semestres después. Acepta pagar el 10% anual. Cuánto dinero debe pagar dentro de 4 semestres?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+
+            /****** ANUALIDADES ******/
+            case 100:
+                titulo.setText("EJERCICIO 1");
+                enunciado.setText("¿Qué renta anual antipada en dos años es equivalente a una renta mensual anticipada de $ 680.000, a una tasa de 25% anual pagadero mensual?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 101:
+                titulo.setText("EJERCICIO 2");
+                enunciado.setText("¿Qué depósito anticipado quincenal se debe hacer durante 5 bimestres para acumular $3.900.000, 15 días después de realizar el último depósito, si el dinero produce 24% de interés anual pagadero mensual? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 102:
+                titulo.setText("EJERCICIO 3");
+                enunciado.setText("Se obtiene un préstamo de $324.000.000. Se va a pagar con 6 abonos mensuales iguales; el primero, un mes después de realizado el préstamo, más $112.000.000 adicionales al último abono mensual. Si el interés acordado es de 18% anual pagadero mensual ¿cuál debe ser el valor de los pagos mensuales? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 103:
+                titulo.setText("EJERCICIO 4");
+                enunciado.setText("Se quiere reunir $45.000.000 en 3 años mediante consignaciones bimestrales que crecen anualmente un 5%, si la tasa de interés que se reconoce es de 5% semestral.");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 104:
+                titulo.setText("EJERCICIO 5");
+                enunciado.setText("Una persona contrae una deuda por $80.000.000 a pagar en 14 meses con 0.8% de interés efectivo mensual. Desea cancelarla con un fondo constituido mediante depósitos mensuales vencidos. ¿Cuál deberá ser el importe de los depósitos si el fondo se coloca a 6% anual pagadero mensualmente? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 105:
+                titulo.setText("EJERCICIO 6");
+                enunciado.setText("¿Cuál es la renta semestral anticipada equivalente a una renta mensual anticipada de $660.000, si el interés es de 22.52% anual pagadero mensual? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 106:
+                titulo.setText("EJERCICIO 7");
+                enunciado.setText("Se desean tener $30.000.000 en 3 años. Para ello se realizan consignaciones trimestrales que crecen $40.000 cada año. ¿Cuál es el valor de la última consignación. Si se reconoce una tasa de interés del 3% semestral? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 107:
+                titulo.setText("EJERCICIO 8");
+                enunciado.setText("Una persona adquiere a crédito un apartamento y conviene pagar al final de cada uno de los 3 primeros años, una anualidad de $165.000.000 Para prevenir el pago de estas anualidades decide acumular un fondo mediante depósitos quincenales en una cuenta que paga 12% anual pagadero mensual. ¿Cuánto debe depositar cada quincena para acumular lo que necesita para amortizar su deuda cada fin de año?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 108:
+                titulo.setText("EJERCICIO 9");
+                enunciado.setText("Cuánto dinero se tendrá dentro de 5 años si se realizan consignaciones mensuales de $400.000 que decrecen $20.000 cada año. El interés que se reconoce es del 3% semestral pagadero quincenal por los primeros 2 años y medio y del 6.5% anual pagadero mensual de ahí en adelante. ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 109:
+                titulo.setText("EJERCICIO 10");
+                enunciado.setText("¿Qué renta pagada los días primero de junio, julio, agosto y septiembre equivale a un pago de $3.720.000 realizado hoy primero de febrero si el interés es de 20.5% efectivo semestral? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 110:
+                titulo.setText("EJERCICIO 11");
+                enunciado.setText("án pagaderos en 60 cuotas mensuales iguales. La primer cuota 4 meses después de la firma del convenio y se pacta una tasa del 14% anual. Cuál es el valor de cada una de las cuotas? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 111:
+                titulo.setText("EJERCICIO 12");
+                enunciado.setText("Un agricultor solicita un préstamo para la compra de fertilizantes. El banco le otorga $60.000.000 a pagar en 12 meses con un periodo de 3 meses de gracia (no se paga ninguna cuota). ¿Cuál será el valor de las mensualidades si la tasa de interés es igual al 18% anual pagadero quincenal? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 112:
+                titulo.setText("EJERCICIO 13");
+                enunciado.setText("Una persona acuerda pagar su deuda mediante 8 pagos mensuales de $3.500.000, el primero de los cuales lo debe efectuar 6 meses después del acuerdo. Si después de realizar el quinto pago deja de hacer dos pagos, ¿qué monto único deberá entregar al vencer el último pago pactado originalmente para saldar completamente su deuda, si el interés es de 21.60% anual pagadero mensual? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 113:
+                titulo.setText("EJERCICIO 14");
+                enunciado.setText("Una inversión que logro acumular la cantidad de $550.000.000 durante 5.5 años con depósitos mensuales anticipados y con una tasa promedio del 7.9% anual pagadero mensual. ¿De cuánto debió haber sido cada depósito? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 114:
+                titulo.setText("EJERCICIO 15");
+                enunciado.setText("Una empresa adquiere un terreno con valor de $75.000.000, y acuerda pagarlo mediante 6 pagos trimestrales comenzando en el momento de formalizar la operación. Si se cobran intereses de 1.35% mensual pagadero quincenal, ¿de cuánto deben ser cada uno de los pagos? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 115:
+                titulo.setText("EJERCICIO 16");
+                enunciado.setText("Se hicieron depósitos trimestrales de $150.000 vencidos a 6% semestral pagadero mensualmente. ¿Cuántos depósitos se hicieron si un mes después de realizado el último se tenía un monto de $15.100.000?");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 116:
+                titulo.setText("EJERCICIO 17");
+                enunciado.setText("Una persona está planeando sus próximas vacaciones. Encuentra la promoción de un banco que ofrece viajes todo incluido a destinos de playa mediante una cuota inicial de $1.000.000 y 48 pagos semanales de $182.000. \n" +
+                        "a) ¿Cuál es el valor presente del viaje si el banco le carga un interés de 1,2 % semanal? \n" +
+                        "b) ¿Cuánto debería ahorrar durante 48 semanas en una cuenta que paga 10 % de interés anual pagadero semanal si deseara pagar el viaje al contado y este le costara $5.900.000? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 117:
+                titulo.setText("EJERCICIO 18");
+                enunciado.setText("Se depositaron $7.000.000 en una inversión que paga 7% anual pagadero mensual. Además: a) Se depositaron, comenzando un mes después, $1.000.000 mensuales durante 1 año; Al final del mes 19 se depositaron $12.000.000. ¿Cuál es el monto de todas estas inversiones al final del mes 24? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 118:
+                titulo.setText("EJERCICIO 19");
+                enunciado.setText("Una persona invierte hoy $30.000.000 en un negocio que le pagará 8 pagos semestrales de $13.500.000 comenzando dentro de 2 años. ¿Qué rendimiento anual efectivo tuvo la inversión? ");
+                solucion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SolucionInteresActivity.class);
+                        intent.putExtra("solucion", vista);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 119:
+                titulo.setText("EJERCICIO 20");
+                enunciado.setText("Se contrae hoy una deuda por $24.000.000 pagadera a 7 meses sin intereses. Si se depositan $3.000.000 mensuales en un fondo que paga 0.5% mensual de interés, ¿qué porcentaje de la deuda se habrá amortizado al momento de hacer el sexto depósito? ");
                 solucion.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

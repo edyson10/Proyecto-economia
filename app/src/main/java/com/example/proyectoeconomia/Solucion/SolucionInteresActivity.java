@@ -5,6 +5,7 @@ import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -745,6 +746,108 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 my2 = getResources().getDrawable(R.drawable.compuesto_50_2);
                 imagen1.setImageDrawable(my1);
                 imagen2.setImageDrawable(my2);
+                break;
+
+            /****** ANUALIDADES ******/
+            case 100:
+                titulo.setText("EJERCICIO 1");
+                my1 = getResources().getDrawable(R.drawable.anual_1);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 101:
+                titulo.setText("EJERCICIO 2");
+                my1 = getResources().getDrawable(R.drawable.anual_2);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 102:
+                titulo.setText("EJERCICIO 3");
+                my1 = getResources().getDrawable(R.drawable.anual_3);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 103:
+                titulo.setText("EJERCICIO 4");
+                my1 = getResources().getDrawable(R.drawable.anual_4);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 104:
+                titulo.setText("EJERCICIO 5");
+                my1 = getResources().getDrawable(R.drawable.anual_5);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 105:
+                titulo.setText("EJERCICIO 6");
+                my1 = getResources().getDrawable(R.drawable.anual_6);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 106:
+                titulo.setText("EJERCICIO 7");
+                my1 = getResources().getDrawable(R.drawable.anual_7);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 107:
+                titulo.setText("EJERCICIO 8");
+                my1 = getResources().getDrawable(R.drawable.anual_8);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 108:
+                titulo.setText("EJERCICIO 9");
+                my1 = getResources().getDrawable(R.drawable.anual_9);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 109:
+                titulo.setText("EJERCICIO 10");
+                my1 = getResources().getDrawable(R.drawable.anual_10);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 110:
+                titulo.setText("EJERCICIO 11");
+                my1 = getResources().getDrawable(R.drawable.anual_11);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 111:
+                titulo.setText("EJERCICIO 12");
+                my1 = getResources().getDrawable(R.drawable.anual_12);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 112:
+                titulo.setText("EJERCICIO 13");
+                my1 = getResources().getDrawable(R.drawable.anual_13);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 113:
+                titulo.setText("EJERCICIO 14");
+                my1 = getResources().getDrawable(R.drawable.anual_14);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 114:
+                titulo.setText("EJERCICIO 15");
+                my1 = getResources().getDrawable(R.drawable.anual_15);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 115:
+                titulo.setText("EJERCICIO 16");
+                my1 = getResources().getDrawable(R.drawable.anual_16);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 116:
+                titulo.setText("EJERCICIO 17");
+                my1 = getResources().getDrawable(R.drawable.anual_17);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 117:
+                titulo.setText("EJERCICIO 18");
+                my1 = getResources().getDrawable(R.drawable.anual_18);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 118:
+                titulo.setText("EJERCICIO 19");
+                my1 = getResources().getDrawable(R.drawable.anual_19);
+                imagen1.setImageDrawable(my1);
+                break;
+            case 119:
+                titulo.setText("EJERCICIO 20");
+                my1 = getResources().getDrawable(R.drawable.anual_20);
+                imagen1.setImageDrawable(my1);
                 break;
         }
     }
