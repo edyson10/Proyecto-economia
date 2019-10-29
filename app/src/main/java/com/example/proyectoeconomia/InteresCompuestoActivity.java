@@ -144,14 +144,14 @@ public class InteresCompuestoActivity extends AppCompatActivity {
     }
 
     private void vistaEjercicios(final Button []p){
-        for (int i = 0; i < p.length;i++){
+        for (int i = 1; i < p.length;i++){
             final int finalI = i;
             p[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     //Toast.makeText(getApplicationContext(), "Se presiono el boton: " + p[finalI].getText().toString(),Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), EjercicioActivity.class);
-                    intent.putExtra("boton", (finalI + 50));
+                    intent.putExtra("boton", Integer.parseInt(p[finalI].getText().toString()) + 50);
                     startActivity(intent);
                 }
             });

@@ -51,10 +51,9 @@ public class AnualidadesActivity extends AppCompatActivity {
         botones = new Button[]{e1, e2, e3, e4, e5, e6, e7, e8, e9, e10,
                 e11, e12, e13, e14, e15, e16, e17, e18, e19, e20};
 
-        vistaEjercicios(botones);
 
         final AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setTitle("Solucionario");
+        alertDialog.setTitle("Solucionario Sot.Mat.Fi");
         alertDialog.setMessage("¿Cuantos ejercicios desea hacer? \n Del 1 al 5");
         numero = new EditText(this);
         numero.setInputType(InputType.TYPE_CLASS_NUMBER);
@@ -64,17 +63,18 @@ public class AnualidadesActivity extends AppCompatActivity {
         alertDialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+
                 String n = numero.getText().toString();
                 numero.setText("");
                 int num = Integer.parseInt(n);
-                if(  num >= 1 && num <= 5){
+                if(  num >= 1 && num <= 5 ) {
                     int []numAle = aleatorio(num);
                     String r = concatenarArreglo(numAle);
-                    Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), EjercicioActivity.class);
-                    intent.putExtra("solucion", r);
+                    //Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), EjemplosActivity.class);
+                    intent.putExtra("prueba", r);
                     startActivity(intent);
-                }else Toast.makeText(getApplicationContext(), "Debe digitar un numero entre 1 y 5", Toast.LENGTH_SHORT).show();
+                } else Toast.makeText(getApplicationContext(), "Debe digitar un numero entre 1 y 5", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -94,17 +94,20 @@ public class AnualidadesActivity extends AppCompatActivity {
                 alert.show();
             }
         });
+
+        vistaEjercicios(botones);
+
     }
 
     private void vistaEjercicios(final Button []p){
-        for (int i = 0; i < p.length;i++){
+        for (int i = 1; i < p.length;i++){
             final int finalI = i;
             p[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //Toast.makeText(getApplicationContext(), "Se presiono el boton: " + p[finalI].getText().toString(),Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "Se presiono el boton: " + (Integer.parseInt(p[finalI].getText().toString()) + 100),Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), EjercicioActivity.class);
-                    intent.putExtra("boton", (finalI + 100));
+                    intent.putExtra("anualidades", (Integer.parseInt(p[finalI].getText().toString()) + 100));
                     startActivity(intent);
                 }
             });
@@ -114,7 +117,7 @@ public class AnualidadesActivity extends AppCompatActivity {
     public int[] aleatorio(int numero){
         int []arreglo = new int[numero];
         for(int i = 0; i < arreglo.length; i++){
-            int alea = (int)(Math.random() * 100);
+            int alea = (int)(Math.random() * 150);
             arreglo[i] = alea;
         }
 

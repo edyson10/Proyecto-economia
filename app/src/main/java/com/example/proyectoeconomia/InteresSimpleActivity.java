@@ -134,7 +134,7 @@ public class InteresSimpleActivity extends AppCompatActivity {
     }
 
     private void vistaEjercicios(final Button []p){
-        for (int i = 0; i < p.length;i++){
+        for (int i = 1; i < p.length;i++){
             final int finalI = i;
             p[i].setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -151,7 +151,7 @@ public class InteresSimpleActivity extends AppCompatActivity {
     public int[] aleatorio(int numero){
         int []arreglo = new int[numero];
         for(int i = 0; i < arreglo.length; i++){
-            int alea = (int)(Math.random() * 100);
+            int alea = (int)(Math.random() * 50);
             arreglo[i] = alea;
         }
 

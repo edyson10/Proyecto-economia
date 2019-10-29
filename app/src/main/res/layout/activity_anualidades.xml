@@ -16,7 +16,7 @@
     android:id="@+id/txtTituloMayor"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="INTERES COMPUESTO"
+    android:text="ANUALIDADES"
     android:textStyle="bold"
     android:textSize="20dp"
     android:gravity="center"
