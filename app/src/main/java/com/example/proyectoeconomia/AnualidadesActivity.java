@@ -117,7 +117,8 @@ public class AnualidadesActivity extends AppCompatActivity {
     public int[] aleatorio(int numero){
         int []arreglo = new int[numero];
         for(int i = 0; i < arreglo.length; i++){
-            int alea = (int)(Math.random() * 120 + 101);
+            //int alea = (int) Math.floor(Math.random() * 50 + 100);
+            int alea = (int)(Math.random() * (120 - 101 + 1) + 101);
             arreglo[i] = alea;
         }
 

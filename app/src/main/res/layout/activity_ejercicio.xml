@@ -31,6 +31,7 @@
         android:id="@+id/btnSolucionario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
         android:layout_alignParentBottom="true"
         android:text="SOLUCION"/>
 

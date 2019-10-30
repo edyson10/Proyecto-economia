@@ -160,7 +160,8 @@ public class InteresCompuestoActivity extends AppCompatActivity {
     public int[] aleatorio(int numero){
         int []arreglo = new int[numero];
         for(int i = 0; i < arreglo.length; i++){
-            int alea = (int)(Math.random() * 100 + 51);
+            //int alea = (int)(Math.random() * 100 + 51);
+            int alea = (int)(Math.random() * (100 - 51 + 1) + 51);
             arreglo[i] = alea;
         }
 
