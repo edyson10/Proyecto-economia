@@ -125,10 +125,6 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 titulo.setText("SOLUCION EJERCICIO 3");
                 photoView1.setImageResource(R.drawable.s3_1);
                 photoView2.setImageResource(R.drawable.s3_2);
-                my1 = getResources().getDrawable(R.drawable.s3_1);
-                my2 = getResources().getDrawable(R.drawable.s3_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
                 break;
             //SOLUCION 4
             case 4:
@@ -186,6 +182,7 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 break;
             //SOLUCION 13
             case 13:
+                titulo.setText("SOLUCION EJERCICIO 13");
                 photoView1.setImageResource(R.drawable.solucion_ejercicio_13);
                 break;
             //SOLUCION 14
@@ -536,239 +533,184 @@ public class SolucionInteresActivity extends AppCompatActivity {
                 break;
             case 81:
                 titulo.setText("SOLUCION EJERCICIO 31");
-                my1 = getResources().getDrawable(R.drawable.compuesto_31);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.compuesto_31);
                 break;
             case 82:
                 titulo.setText("SOLUCION EJERCICIO 32");
-                my1 = getResources().getDrawable(R.drawable.compuesto_32_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_32_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_32_1);
+                photoView2.setImageResource(R.drawable.compuesto_32_2);
                 break;
             case 83:
                 titulo.setText("SOLUCION EJERCICIO 33");
-                my1 = getResources().getDrawable(R.drawable.compuesto_33_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_33_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_33_1);
+                photoView2.setImageResource(R.drawable.compuesto_33_2);
                 break;
             case 84:
                 titulo.setText("SOLUCION EJERCICIO 34");
-                my1 = getResources().getDrawable(R.drawable.compuesto_34_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_34_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_34_1);
+                photoView2.setImageResource(R.drawable.compuesto_34_2);
                 break;
             case 85:
                 titulo.setText("SOLUCION EJERCICIO 35");
-                my1 = getResources().getDrawable(R.drawable.compuesto_35_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_35_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_35_1);
+                photoView2.setImageResource(R.drawable.compuesto_35_2);
                 break;
             case 86:
                 titulo.setText("SOLUCION EJERCICIO 36");
-                my1 = getResources().getDrawable(R.drawable.compuesto_36);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.compuesto_36);
                 break;
             case 87:
                 titulo.setText("SOLUCION EJERCICIO 37");
-                my1 = getResources().getDrawable(R.drawable.compuesto_37_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_37_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_37_1);
+                photoView1.setImageResource(R.drawable.compuesto_37_2);
                 break;
             case 88:
                 titulo.setText("SOLUCION EJERCICIO 38");
-                my1 = getResources().getDrawable(R.drawable.compuesto_38);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.compuesto_38);
                 break;
             case 89:
                 titulo.setText("SOLUCION EJERCICIO 39");
-                my1 = getResources().getDrawable(R.drawable.compuesto_39_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_39_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_39_1);
+                photoView2.setImageResource(R.drawable.compuesto_39_2);
                 break;
             case 90:
                 titulo.setText("SOLUCION EJERCICIO 40");
-                my1 = getResources().getDrawable(R.drawable.compuesto_40_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_40_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_40_1);
+                photoView2.setImageResource(R.drawable.compuesto_40_2);
                 break;
             case 91:
                 titulo.setText("SOLUCION EJERCICIO 41");
-                my1 = getResources().getDrawable(R.drawable.compuesto_41_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_41_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_41_1);
+                photoView1.setImageResource(R.drawable.compuesto_41_2);
                 break;
             case 92:
                 titulo.setText("SOLUCION EJERCICIO 42");
-                my1 = getResources().getDrawable(R.drawable.compuesto_42_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_42_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_42_1);
+                photoView2.setImageResource(R.drawable.compuesto_42_2);
                 break;
             case 93:
                 titulo.setText("SOLUCION EJERCICIO 43");
-                my1 = getResources().getDrawable(R.drawable.compuesto_43_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_43_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_43_1);
+                photoView2.setImageResource(R.drawable.compuesto_43_2);
                 break;
             case 94:
                 titulo.setText("SOLUCION EJERCICIO 44");
-                my1 = getResources().getDrawable(R.drawable.compuesto_44_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_44_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_44_1);
+                photoView2.setImageResource(R.drawable.compuesto_44_2);
                 break;
             case 95:
                 titulo.setText("SOLUCION EJERCICIO 45");
-                my1 = getResources().getDrawable(R.drawable.compuesto_45_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_45_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_45_1);
+                photoView2.setImageResource(R.drawable.compuesto_45_2);
                 break;
             case 96:
                 titulo.setText("SOLUCION EJERCICIO 46");
-                my1 = getResources().getDrawable(R.drawable.compuesto_46_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_46_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_46_1);
+                photoView2.setImageResource(R.drawable.compuesto_46_2);
                 break;
             case 97:
                 titulo.setText("SOLUCION EJERCICIO 47");
-                my1 = getResources().getDrawable(R.drawable.compuesto_47_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_47_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_47_1);
+                photoView2.setImageResource(R.drawable.compuesto_47_2);
                 break;
             case 98:
                 titulo.setText("SOLUCION EJERCICIO 48");
-                my1 = getResources().getDrawable(R.drawable.compuesto_48_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_48_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_48_1);
+                photoView1.setImageResource(R.drawable.compuesto_48_2);
                 break;
             case 99:
                 titulo.setText("SOLUCION EJERCICIO 49");
-                my1 = getResources().getDrawable(R.drawable.compuesto_49_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_49_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_49_1);
+                photoView2.setImageResource(R.drawable.compuesto_49_2);
                 break;
             case 100:
                 titulo.setText("SOLUCION EJERCICIO 50");
-                my1 = getResources().getDrawable(R.drawable.compuesto_50_1);
-                my2 = getResources().getDrawable(R.drawable.compuesto_50_2);
-                imagen1.setImageDrawable(my1);
-                imagen2.setImageDrawable(my2);
+                photoView1.setImageResource(R.drawable.compuesto_50_1);
+                photoView2.setImageResource(R.drawable.compuesto_50_2);
                 break;
 
             /****** ANUALIDADES ******/
             case 101:
                 titulo.setText("EJERCICIO 1");
-                my1 = getResources().getDrawable(R.drawable.anual_1);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_1);
                 break;
             case 102:
                 titulo.setText("EJERCICIO 2");
-                my1 = getResources().getDrawable(R.drawable.anual_2);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_2);
                 break;
             case 103:
                 titulo.setText("EJERCICIO 3");
-                my1 = getResources().getDrawable(R.drawable.anual_3);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_3);
                 break;
             case 104:
                 titulo.setText("EJERCICIO 4");
-                my1 = getResources().getDrawable(R.drawable.anual_4);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_4);
                 break;
             case 105:
                 titulo.setText("EJERCICIO 5");
-                my1 = getResources().getDrawable(R.drawable.anual_5);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_5);
                 break;
             case 106:
                 titulo.setText("EJERCICIO 6");
-                my1 = getResources().getDrawable(R.drawable.anual_6);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_6);
                 break;
             case 107:
                 titulo.setText("EJERCICIO 7");
-                my1 = getResources().getDrawable(R.drawable.anual_7);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_7);
                 break;
             case 108:
                 titulo.setText("EJERCICIO 8");
-                my1 = getResources().getDrawable(R.drawable.anual_8);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_8);
                 break;
             case 109:
                 titulo.setText("EJERCICIO 9");
-                my1 = getResources().getDrawable(R.drawable.anual_9);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_9);
                 break;
             case 110:
                 titulo.setText("EJERCICIO 10");
-                my1 = getResources().getDrawable(R.drawable.anual_10);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_10);
                 break;
             case 111:
                 titulo.setText("EJERCICIO 11");
-                my1 = getResources().getDrawable(R.drawable.anual_11);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_11);
                 break;
             case 112:
                 titulo.setText("EJERCICIO 12");
-                my1 = getResources().getDrawable(R.drawable.anual_12);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_12);
                 break;
             case 113:
                 titulo.setText("EJERCICIO 13");
-                my1 = getResources().getDrawable(R.drawable.anual_13);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_13);
                 break;
             case 114:
                 titulo.setText("EJERCICIO 14");
-                my1 = getResources().getDrawable(R.drawable.anual_14);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_14);
                 break;
             case 115:
                 titulo.setText("EJERCICIO 15");
-                my1 = getResources().getDrawable(R.drawable.anual_15);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_15);
                 break;
             case 116:
                 titulo.setText("EJERCICIO 16");
-                my1 = getResources().getDrawable(R.drawable.anual_16);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_16);
                 break;
             case 117:
                 titulo.setText("EJERCICIO 17");
-                my1 = getResources().getDrawable(R.drawable.anual_17);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_17);
                 break;
             case 118:
                 titulo.setText("EJERCICIO 18");
-                my1 = getResources().getDrawable(R.drawable.anual_18);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_18);
                 break;
             case 119:
                 titulo.setText("EJERCICIO 19");
-                my1 = getResources().getDrawable(R.drawable.anual_19);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_19);
                 break;
             case 120:
                 titulo.setText("EJERCICIO 20");
-                my1 = getResources().getDrawable(R.drawable.anual_20);
-                imagen1.setImageDrawable(my1);
+                photoView1.setImageResource(R.drawable.anual_20);
+                photoView2.setVisibility(View.INVISIBLE);
+                photoView3.setVisibility(View.INVISIBLE);
                 break;
         }
     }
