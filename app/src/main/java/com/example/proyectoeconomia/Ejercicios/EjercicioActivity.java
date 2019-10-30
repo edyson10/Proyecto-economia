@@ -27,32 +27,28 @@ public class EjercicioActivity extends AppCompatActivity {
         enunciado = (TextView) findViewById(R.id.txtEnunciadoEjericico);
         solucion = (Button) findViewById(R.id.btnSolucionario);
 
-        String []vis = null;
-        Bundle datos = this.getIntent().getExtras();
-        boton = datos.getString("arreglo");
+        Bundle vista = this.getIntent().getExtras();
 
-        if(boton != null){
-            vis= boton.split("-");
-            //Toast.makeText(getApplicationContext(), "-> " + vis[1], Toast.LENGTH_SHORT).show();
-            int vista = Integer.parseInt(vis[0].toString());
-            //Toast.makeText(getApplicationContext(), "-> " + vis[0], Toast.LENGTH_SHORT).show();
-            vistaEjerecicio(vista);
+        int simple  = vista.getInt("simple");
+        if (simple != 0) {
+            vistaEjerecicio(simple);
         }
 
-        Bundle vista = this.getIntent().getExtras();
-        int view = vista.getInt("boton");
-        if( view != 0) {
-            vistaEjerecicio(view);
-            Toast.makeText(getApplicationContext(), "Comp: " + view, Toast.LENGTH_SHORT).show();
+        int compuesto = vista.getInt("compuesto");
+        if( compuesto != 0) {
+            vistaEjerecicio(compuesto);
         }
 
         Bundle ale = this.getIntent().getExtras();
-        int al = ale.getInt("anualidades");
-        if(al != 0){
-            vistaEjerecicio(al);
-            Toast.makeText(getApplicationContext(), "Anu" + al, Toast.LENGTH_SHORT).show();
+        int anualidades = ale.getInt("anualidades");
+        if(anualidades != 0){
+            vistaEjerecicio(anualidades);
         }
 
+        int aleatorio = vista.getInt("alea");
+        if (aleatorio !=0 ) {
+            vistaEjerecicio(aleatorio);
+        }
     }
 
     private void vistaEjerecicio(final int vista){

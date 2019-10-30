@@ -77,14 +77,14 @@ public class MainActivity extends AppCompatActivity {
                 String n = numero.getText().toString();
                 numero.setText("");
                 int num = Integer.parseInt(n);
-                if(  num >= 1 && num <= 5){
+                if (num >= 1 && num <= 5) {
                     int []numAle = aleatorio(num);
-                    String r = prueba(numAle);
-                    Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), EjercicioActivity.class);
-                    intent.putExtra("arreglo", r);
+                    String r = concatenarArreglo(numAle);
+                    //Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), EjemplosActivity.class);
+                    intent.putExtra("aleatorio", r);
                     startActivity(intent);
-                }else Toast.makeText(getApplicationContext(), "Debe digitar un numero entre 1 y 5", Toast.LENGTH_SHORT).show();
+                } else Toast.makeText(getApplicationContext(), "Debe digitar un numero entre 1 y 5", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         return arreglo;
     }
 
-    private String prueba(int[] numero){
+    private String concatenarArreglo(int[] numero){
         String cad = "";
         for (int i = 0; i < numero.length; i++){
             cad += "" + numero[i] + "-";

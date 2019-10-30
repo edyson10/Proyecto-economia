@@ -29,28 +29,31 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageView
+
+            <com.github.chrisbanes.photoview.PhotoView
                 android:id="@+id/imagenSolucion1"
                 android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center|center_horizontal"/>
 
-            <ImageView
+
+            <com.github.chrisbanes.photoview.PhotoView
                 android:id="@+id/imagenSolucion2"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/imagenSolucion1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center|center_horizontal"/>
 
-            <ImageView
+            <com.github.chrisbanes.photoview.PhotoView
                 android:id="@+id/imagenSolucion3"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/imagenSolucion2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center|center_horizontal"/>
+
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

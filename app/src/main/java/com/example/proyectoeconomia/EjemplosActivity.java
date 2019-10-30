@@ -36,7 +36,7 @@ public class EjemplosActivity extends AppCompatActivity {
 
 
         Bundle parmetros = this.getIntent().getExtras();
-        final String aleatorio = parmetros.getString("prueba");
+        final String aleatorio = parmetros.getString("aleatorio");
         //Toast.makeText(getApplicationContext(), "Numero aleatorios: " + aleatorio, Toast.LENGTH_SHORT).show();
         final String []ale = aleatorio.split("-");
         numerosAleatorios(ale);
@@ -54,7 +54,6 @@ public class EjemplosActivity extends AppCompatActivity {
                 enviarDatos(Integer.parseInt(ale[0]));
             }
         });
-
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +80,7 @@ public class EjemplosActivity extends AppCompatActivity {
         });
     }
 
-    private void enviarDatos(int numero){
+    private void enviarDatos(int numero) {
         Intent intent = new Intent(getApplicationContext(), EjercicioActivity.class);
         intent.putExtra("alea", numero);
         startActivity(intent);

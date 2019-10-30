@@ -20,7 +20,6 @@ public class InteresSimpleActivity extends AppCompatActivity {
     Button e21,e22,e23,e24,e25,e26,e27,e28,e29,e30,e31,e32,e33,e34,e35,e36,e37,e38,e39,e40;
     Button e41,e42,e43,e44,e45,e46,e47,e48,e49,e50;
     Button []pru = new Button[50];
-
     private EditText numero;
 
     @Override
@@ -103,12 +102,12 @@ public class InteresSimpleActivity extends AppCompatActivity {
                 String n = numero.getText().toString();
                 numero.setText("");
                 int num = Integer.parseInt(n);
-                if(  num >= 1 && num <= 5){
+                if (num >= 1 && num <= 5) {
                     int []numAle = aleatorio(num);
-                    String r = prueba(numAle);
-                    Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), EjercicioActivity.class);
-                    intent.putExtra("arreglo", r);
+                    String r = concatenarArreglo(numAle);
+                    //Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), EjemplosActivity.class);
+                    intent.putExtra("aleatorio", r);
                     startActivity(intent);
                 }else Toast.makeText(getApplicationContext(), "Debe digitar un numero entre 1 y 5", Toast.LENGTH_SHORT).show();
             }
@@ -134,14 +133,14 @@ public class InteresSimpleActivity extends AppCompatActivity {
     }
 
     private void vistaEjercicios(final Button []p){
-        for (int i = 1; i < p.length;i++){
+        for (int i = 0; i < p.length;i++){
             final int finalI = i;
             p[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     //Toast.makeText(getApplicationContext(), "Se presiono el boton: " + p[finalI].getText().toString(),Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), EjercicioActivity.class);
-                    intent.putExtra("boton", finalI);
+                    intent.putExtra("simple", (finalI+1));
                     startActivity(intent);
                 }
             });
@@ -158,7 +157,7 @@ public class InteresSimpleActivity extends AppCompatActivity {
         return arreglo;
     }
 
-    private String prueba(int[] numero){
+    private String concatenarArreglo(int[] numero){
         String cad = "";
         for (int i = 0; i < numero.length; i++){
             cad += "" + numero[i] + "-";

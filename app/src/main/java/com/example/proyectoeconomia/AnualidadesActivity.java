@@ -18,8 +18,8 @@ public class AnualidadesActivity extends AppCompatActivity {
 
     Button e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15, e16, e17, e18, e19, e20, btnAle;
     Button []botones = new Button[50];
-
     private EditText numero;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,12 +67,12 @@ public class AnualidadesActivity extends AppCompatActivity {
                 String n = numero.getText().toString();
                 numero.setText("");
                 int num = Integer.parseInt(n);
-                if(  num >= 1 && num <= 5 ) {
+                if (num >= 1 && num <= 5 ) {
                     int []numAle = aleatorio(num);
                     String r = concatenarArreglo(numAle);
                     //Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), EjemplosActivity.class);
-                    intent.putExtra("prueba", r);
+                    intent.putExtra("aleatorio", r);
                     startActivity(intent);
                 } else Toast.makeText(getApplicationContext(), "Debe digitar un numero entre 1 y 5", Toast.LENGTH_SHORT).show();
             }
@@ -100,7 +100,7 @@ public class AnualidadesActivity extends AppCompatActivity {
     }
 
     private void vistaEjercicios(final Button []p){
-        for (int i = 1; i < p.length;i++){
+        for (int i = 0; i < p.length;i++){
             final int finalI = i;
             p[i].setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -117,7 +117,7 @@ public class AnualidadesActivity extends AppCompatActivity {
     public int[] aleatorio(int numero){
         int []arreglo = new int[numero];
         for(int i = 0; i < arreglo.length; i++){
-            int alea = (int)(Math.random() * 150);
+            int alea = (int)(Math.random() * 120 + 101);
             arreglo[i] = alea;
         }
 
