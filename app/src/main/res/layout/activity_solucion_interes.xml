@@ -1,59 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="16dp"
-    android:layout_marginBottom="16dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     android:orientation="vertical"
     tools:context=".Solucion.SolucionInteresActivity">
 
-    <TextView
-        android:id="@+id/tituloSolucion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="15dp"
-        android:gravity="center_horizontal"/>
+    <include
+        layout="@layout/toolbar"/>
 
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_below="@id/tituloSolucion"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+        <TextView
+            android:id="@+id/tituloSolucion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:gravity="center_horizontal"/>
 
-        <RelativeLayout
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_below="@id/tituloSolucion"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.github.chrisbanes.photoview.PhotoView
-                android:id="@+id/imagenSolucion1"
-                android:layout_marginTop="25dp"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|center_horizontal"/>
+                android:layout_height="match_parent">
+
+                <com.github.chrisbanes.photoview.PhotoView
+                    android:id="@+id/imagenSolucion1"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_horizontal"/>
 
 
-            <com.github.chrisbanes.photoview.PhotoView
-                android:id="@+id/imagenSolucion2"
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/imagenSolucion1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|center_horizontal"/>
+                <com.github.chrisbanes.photoview.PhotoView
+                    android:id="@+id/imagenSolucion2"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/imagenSolucion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_horizontal"/>
 
-            <com.github.chrisbanes.photoview.PhotoView
-                android:id="@+id/imagenSolucion3"
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/imagenSolucion2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|center_horizontal"/>
+                <com.github.chrisbanes.photoview.PhotoView
+                    android:id="@+id/imagenSolucion3"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/imagenSolucion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_horizontal"/>
 
-        </RelativeLayout>
-    </ScrollView>
-</RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

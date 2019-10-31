@@ -1,6 +1,7 @@
 package com.example.proyectoeconomia;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,12 +16,15 @@ import com.example.proyectoeconomia.Solucion.SolucionInteresActivity;
 public class EjemplosActivity extends AppCompatActivity {
 
     Button b1, b2, b3, b4, b5;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ejemplos);
 
+        toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
 
         b1 = (Button) findViewById(R.id.btnPrueba1);
         b2 = (Button) findViewById(R.id.btnAleatorio2);
@@ -40,14 +44,7 @@ public class EjemplosActivity extends AppCompatActivity {
         //Toast.makeText(getApplicationContext(), "Numero aleatorios: " + aleatorio, Toast.LENGTH_SHORT).show();
         final String []ale = aleatorio.split("-");
         numerosAleatorios(ale);
-        /*
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Hola: " + aleatorio, Toast.LENGTH_SHORT).show();
-            }
-        });
-        */
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

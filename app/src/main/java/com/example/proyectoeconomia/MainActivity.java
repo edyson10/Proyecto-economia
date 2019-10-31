@@ -1,29 +1,35 @@
 package com.example.proyectoeconomia;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
-import android.text.Layout;
-import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
-import com.example.proyectoeconomia.Ejercicios.EjercicioActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button interesSimple, interesCompuesto, anualidades, gradiente, aleatorio;
+    Button interesSimple, interesCompuesto, anualidades, gradiente;
     private EditText numero;
 
+    private Toolbar toolbar;
+    AlertDialog.Builder alertDialog;
+    AlertDialog alert;
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +39,11 @@ public class MainActivity extends AppCompatActivity {
         interesCompuesto = (Button) findViewById(R.id.btnInteresCompueto);
         anualidades = (Button) findViewById(R.id.btnAnualidades);
         gradiente = (Button) findViewById(R.id.btnGradientes);
-        aleatorio = (Button) findViewById(R.id.btnAleatorio);
+
+        toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
+
+        //toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
 
         interesSimple.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,47 +73,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setTitle("Solucionario");
-        alertDialog.setMessage("¿Cuantos ejercicios desea hacer? \n Del 1 al 5");
-        numero = new EditText(this);
-        numero.setInputType(InputType.TYPE_CLASS_NUMBER);
-        numero.setPadding(30,10,30,25);
-        alertDialog.setView(numero);
+        alertDialog = new AlertDialog.Builder(this);
 
-        alertDialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                String n = numero.getText().toString();
-                numero.setText("");
-                int num = Integer.parseInt(n);
-                if (num >= 1 && num <= 5) {
-                    int []numAle = aleatorio(num);
-                    String r = concatenarArreglo(numAle);
-                    //Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), EjemplosActivity.class);
-                    intent.putExtra("aleatorio", r);
-                    startActivity(intent);
-                } else Toast.makeText(getApplicationContext(), "Debe digitar un numero entre 1 y 5", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        alertDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-                numero.setText("");
-            }
-        });
-
-        final AlertDialog alert = alertDialog.create();
-
-        aleatorio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                alert.show();
-            }
-        });
     }
 
     private void vistaInteresSimple(){
@@ -143,16 +114,55 @@ public class MainActivity extends AppCompatActivity {
         return cad;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.logout) {
-            return true;
-        }
+    private void botonAleatorio(){
+        alertDialog.setTitle("Solucionario");
+        alertDialog.setMessage("¿Cuantos ejercicios desea hacer? \n Del 1 al 5");
+        numero = new EditText(this);
+        numero.setInputType(InputType.TYPE_CLASS_NUMBER);
+        numero.setPadding(30,10,30,25);
+        alertDialog.setView(numero);
 
-        return super.onOptionsItemSelected(item);
+        alertDialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                String n = numero.getText().toString();
+                numero.setText("");
+                int num = Integer.parseInt(n);
+                if (num >= 1 && num <= 5) {
+                    int []numAle = aleatorio(num);
+                    String r = concatenarArreglo(numAle);
+                    //Toast.makeText(getApplicationContext(), "Numeros Aleatorios {" + r + "}", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), EjemplosActivity.class);
+                    intent.putExtra("aleatorio", r);
+                    startActivity(intent);
+                } else Toast.makeText(getApplicationContext(), "Debe digitar un numero entre 1 y 5", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        alertDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+                numero.setText("");
+            }
+        });
+        alert = alertDialog.create();
+        alert.show();
     }
 
-    private interface ExampleDialogListener {
+    @Override
+    public boolean onCreateOptionsMenu(Menu item) {
+        getMenuInflater().inflate(R.menu.main,item);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.aleatorio:
+                botonAleatorio();
+                break;
+        }
+        return true;
     }
 }

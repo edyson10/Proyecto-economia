@@ -1,6 +1,7 @@
 package com.example.proyectoeconomia.Ejercicios;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,23 +19,29 @@ public class EjercicioActivity extends AppCompatActivity {
     Button solucion;
     String boton;
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ejercicio);
+
+        toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
 
         titulo = (TextView) findViewById(R.id.txtTituloEjercicio);
         enunciado = (TextView) findViewById(R.id.txtEnunciadoEjericico);
         solucion = (Button) findViewById(R.id.btnSolucionario);
 
         Bundle vista = this.getIntent().getExtras();
-
         int simple  = vista.getInt("simple");
         if (simple != 0) {
             vistaEjerecicio(simple);
         }
 
-        int compuesto = vista.getInt("compuesto");
+        Bundle anu = this.getIntent().getExtras();
+        int compuesto = anu.getInt("compuesto");
+
         if( compuesto != 0) {
             vistaEjerecicio(compuesto);
         }
@@ -47,6 +54,7 @@ public class EjercicioActivity extends AppCompatActivity {
 
         int aleatorio = vista.getInt("alea");
         if (aleatorio !=0 ) {
+            //Toast.makeText(this, "=> " + aleatorio, Toast.LENGTH_SHORT).show();
             vistaEjerecicio(aleatorio);
         }
     }

@@ -1,6 +1,7 @@
 package com.example.proyectoeconomia.Solucion;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
@@ -28,16 +29,18 @@ public class SolucionInteresActivity extends AppCompatActivity {
     TextView titulo;
     ImageView imagen1, imagen2, imagen3;
     PhotoView photoView1, photoView2, photoView3;
-    private PhotoViewAttacher photoView;
 
-    Matrix matrix = new Matrix();
-    Float scale = 1f;
-    ScaleGestureDetector SGD1, SGD2;
+    private Toolbar toolbar;
+    androidx.appcompat.app.AlertDialog.Builder alertDialog;
+    androidx.appcompat.app.AlertDialog alert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solucion_interes);
+
+        toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
 
         titulo = (TextView) findViewById(R.id.tituloSolucion);
         //imagen1 = (ImageView) findViewById(R.id.imagenSolucion1);
@@ -48,64 +51,12 @@ public class SolucionInteresActivity extends AppCompatActivity {
         photoView2 = (PhotoView) findViewById(R.id.imagenSolucion2);
         photoView3 = (PhotoView) findViewById(R.id.imagenSolucion3);
 
-
         Bundle datos = this.getIntent().getExtras();
         int solucion = datos.getInt("solucion");
         vistaSolucion(solucion);
-
-        /*
-        SGD1 = new ScaleGestureDetector(this, new ScaleListener(imagen1));
-        SGD2 = new ScaleGestureDetector(this, new ScaleListener(imagen2));
-
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.s1_1);
-        RoundedBitmapDrawable mDrawable = RoundedBitmapDrawableFactory.create(getResources(), bitmap);
-        mDrawable.setCircular(true);
-        imagen1.setImageDrawable(mDrawable);
-
-
-        imagen1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder mBuilder = new AlertDialog.Builder(SolucionInteresActivity.this);
-                View mView = getLayoutInflater().inflate(R.layout.dialog_custom_layout, null);
-                PhotoView photoView = mView.findViewById(R.id.imagenSolucion1);
-                Drawable my1 = getResources().getDrawable(R.drawable.s1_1);
-                photoView.setImageResource(R.drawable.logo_ufps);
-                mBuilder.setView(mView);
-                AlertDialog mDialog = mBuilder.create();
-                mDialog.show();
-            }
-        });
-        */
-
-
-
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        SGD1.onTouchEvent(event);
-        return super.onTouchEvent(event);
-    }
-
-    private void mostrarImagen(final PhotoView photo, final int drawable){
-        photo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder mBuilder = new AlertDialog.Builder(SolucionInteresActivity.this);
-                View mView = getLayoutInflater().inflate(R.layout.dialog_custom_layout, null);
-
-                photo.setImageResource(drawable);
-
-                mBuilder.setView(mView);
-                AlertDialog mDialog = mBuilder.create();
-                mDialog.show();
-            }
-        });
     }
 
     private void vistaSolucion(int boton){
-        Drawable my1, my2, my3;
         switch (boton){
             //SOLUCION 1
             /****** INTERES SIMPLE ******/
