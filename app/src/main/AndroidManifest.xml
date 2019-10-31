@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GradienteActivity"></activity>
-        <activity android:name=".AnualidadesActivity" />
-        <activity android:name=".EjemplosActivity" />
-        <activity android:name=".InteresCompuestoActivity" />
-        <activity android:name=".Solucion.SolucionInteresActivity" />
-        <activity android:name=".Ejercicios.EjercicioActivity" />
+        <activity android:name=".GradienteActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".AnualidadesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".EjemplosActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".InteresCompuestoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Solucion.SolucionInteresActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Ejercicios.EjercicioActivity" android:screenOrientation="portrait"/>
         <activity
             android:name=".SplashActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
@@ -26,12 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".InteresSimpleActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait" />
+        <activity android:name=".InteresSimpleActivity" android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity" android:screenOrientation="portrait" />
     </application>
 
 </manifest>
